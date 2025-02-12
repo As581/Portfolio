@@ -1,16 +1,18 @@
-import { useState } from "react";
-import Loading from "./components/Loading";
-import Navbar from "./components/Navbar";
-import Hero from "./components/Hero";
-import Contact from "./components/Contact";
-import Education from "./components/Education";
-import Skills from "./components/Skills";
-import Working from "./components/MyWorkingProcess";
-import Projects from "./components/Projects";
-import About from "./components/About";
-import Footer from "./components/Footer";
+import React, { useState } from 'react';
+import Hero from './components/Hero.jsx';
+import About from './components/About.jsx';
+import Education from './components/Education.jsx';
+import Skills from './components/Skills.jsx';
+import Projects from './components/Projects.jsx';
+import Contact from './components/Contact.jsx';
+import Working from './components/MyWorkingProcess.jsx';
+import Loading from './components/Loading.jsx';
+import useLenis from './Hooks/UseLenis.jsx';
+import Navbar from './components/Navbar.jsx';
+import Footer from './components/Footer.jsx';
 
 function App() {
+  useLenis();
   const [loading, setLoading] = useState(true);
 
   return (
@@ -33,7 +35,7 @@ function App() {
             <Skills />
           </div>
           <div>
-          <Working />
+            <Working />
           </div>
           <div id="projects">
             <Projects />
