@@ -52,7 +52,7 @@ const Skills = () => {
 };
 
 export default Skills;*/
-import { motion } from "framer-motion";
+/*import { motion } from "framer-motion";
 
 const skills = [
   { name: "HTML", img: "https://cdn-icons-png.flaticon.com/128/888/888859.png" },
@@ -79,7 +79,8 @@ const Skills = () => {
     <section className="bg-[#121212] text-[#E0E0E0] py-20">
       <div className="max-w-6xl mx-auto px-6 text-center">
         
-        {/* Animated Heading */}
+        //Animated Heading 
+        
         <motion.h2
           className="text-[2.5vw] font-extrabold text-[#F1E24] tracking-wide"
           initial={{ y: -20, opacity: 0 }}
@@ -89,6 +90,95 @@ const Skills = () => {
         >
           My Skills
         </motion.h2>
+
+        //Underline Effect 
+        
+        <motion.div
+          className="w-[5vw] h-[5px] bg-[#F1E24] mx-auto mt-3"
+          initial={{ scaleX: 0 }}
+          whileInView={{ scaleX: 1 }}
+          transition={{ duration: 0.6, ease: "easeOut" }}
+          viewport={{ once: true }}
+        ></motion.div>
+
+       //Skills Grid 
+        <div className="mt-10 grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-8">
+          {skills.map((skill, index) => (
+            <motion.div
+              key={index}
+              className="flex flex-col items-center p-5 bg-[#1E1E1E] rounded-lg shadow-md 
+              transition-all duration-300 border border-[#F1E24] hover:shadow-lg hover:-translate-y-2"
+              whileHover={{ scale: 1.1 }}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: index * 0.1 }}
+              viewport={{ once: true }}
+            >
+              <img
+                src={skill.img}
+                alt={skill.name}
+                className="w-16 h-16 rounded-full bg-white p-2 shadow-md"
+              />
+              <p className="mt-3 text-lg font-semibold">{skill.name}</p>
+            </motion.div>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+};
+
+export default Skills;*/
+
+import { motion } from "framer-motion";
+
+const skills = [
+  { name: "HTML", img: "https://cdn-icons-png.flaticon.com/128/888/888859.png", level: "Advanced" },
+  { name: "CSS", img: "https://cdn-icons-png.flaticon.com/128/888/888847.png", level: "Advanced" },
+  { name: "JavaScript", img: "https://cdn-icons-png.flaticon.com/128/5968/5968292.png", level: "Advanced" },
+  { name: "Tailwind CSS", img: "/public/Tail.png", level: "Expert" },
+  { name: "Bootstrap", img: "https://cdn-icons-png.flaticon.com/128/5968/5968672.png", level: "Proficient" },
+  { name: "GSAP", img: "/public/Gsap.png", level: "Intermediate" },
+  { name: "Framer Motion", img: "/public/Motion.png", level: "Expert" },
+  { name: "ReactJS", img: "https://cdn-icons-png.flaticon.com/128/1126/1126012.png", level: "Expert" },
+  { name: "Node.js", img: "https://cdn-icons-png.flaticon.com/128/919/919825.png", level: "Advanced" },
+  { name: "Express.js", img: "/public/Express.png", level: "Advanced" },
+  { name: "MongoDB", img: "/public/images (5).png", level: "Proficient" },
+  { name: "Socket.io", img: "/public/Socket.io.png", level: "Advanced" },
+  { name: "Redis", img: "/public/Redis.jpeg", level: "Intermediate" },
+  { name: "jQuery", img: "/public/jQuery.png", level: "Intermediate" },
+  { name: "Adobe XD", img: "/public/Xd.png", level: "Proficient" },
+  { name: "Photoshop", img: "/public/Photo.png", level: "Proficient" },
+  { name: "Figma", img: "/public/Figma.png", level: "Expert" },
+];
+
+const Skills = () => {
+  return (
+    <section className="bg-[#121212] text-[#E0E0E0] py-20">
+      <div className="max-w-6xl mx-auto px-6 text-center">
+        
+        {/* Animated Heading */}
+        <motion.h2
+          className="text-[2.5vw] font-extrabold text-[#F1E24] tracking-wide"
+          initial={{ y: -20, opacity: 0 }}
+          whileInView={{ y: 0, opacity: 1 }}
+          transition={{ duration: 0.8, ease: "easeOut" }}
+          viewport={{ once: true }}
+        >
+          My Skills & Expertise
+        </motion.h2>
+
+        {/* Subheading */}
+        <motion.p
+          className="mt-4 text-[1.2vw] text-gray-400"
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.2 }}
+          viewport={{ once: true }}
+        >
+          Over the years, I have mastered various **frontend & backend technologies**  
+          to build modern, scalable, and **high-performance applications**.
+        </motion.p>
 
         {/* Underline Effect */}
         <motion.div
@@ -118,12 +208,31 @@ const Skills = () => {
                 className="w-16 h-16 rounded-full bg-white p-2 shadow-md"
               />
               <p className="mt-3 text-lg font-semibold">{skill.name}</p>
+              <p className="text-sm text-gray-400">{skill.level}</p>
             </motion.div>
           ))}
         </div>
+
+        {/* Call to Action */}
+        <motion.div
+          className="mt-10"
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.5 }}
+          viewport={{ once: true }}
+        >
+          <a
+            href="#projects"
+            className="inline-block bg-[#F1E24] text-black px-8 py-4 font-bold text-[1.2vw] rounded-full 
+            transition duration-300 hover:bg-yellow-400 hover:shadow-lg hover:scale-105"
+          >
+            Check Out My Work!
+          </a>
+        </motion.div>
       </div>
     </section>
   );
 };
 
 export default Skills;
+

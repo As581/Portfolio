@@ -53,14 +53,13 @@ const About = () => {
 };
 
 export default About; */}
-import { motion } from "framer-motion";
+/*import { motion } from "framer-motion";
 
 const About = () => {
   return (
     <section className="bg-[#121212] text-white py-20 px-6 md:px-20">
       <div className="max-w-5xl mx-auto text-center">
         
-        {/* Animated Heading */}
         <motion.h2
           className="text-[3vw] font-extrabold text-[#F1E24] tracking-wide"
           initial={{ y: -50, opacity: 0 }}
@@ -71,7 +70,7 @@ const About = () => {
           About Me
         </motion.h2>
 
-        {/* Animated Subheading */}
+        // Animated Subheading 
         <motion.p
           className="mt-6 text-[1.3vw] text-gray-300 leading-relaxed tracking-wide"
           initial={{ y: 20, opacity: 0 }}
@@ -84,7 +83,7 @@ const About = () => {
           Skilled in **ReactJS, NodeJS, ExpressJS, MongoDB, Tailwind CSS, Socket.io, Redis, Framer Motion,** and more.  
         </motion.p>
 
-        {/* Animated Description */}
+        // Animated Description 
         <motion.p
           className="mt-6 text-[1.2vw] text-gray-300 leading-relaxed tracking-wide"
           initial={{ y: 20, opacity: 0 }}
@@ -98,7 +97,7 @@ const About = () => {
           My goal is to build **fast, scalable, and user-friendly applications** that make an impact.  
         </motion.p>
 
-        {/* Call-to-Action Button */}
+        // Call-to-Action Button 
         <motion.a
           href="#contact"
           className="mt-8 inline-block bg-[#F1E24] text-black px-8 py-4 font-bold text-[1.2vw] rounded-full 
@@ -116,5 +115,101 @@ const About = () => {
   );
 };
 
+export default About;*/
+import { motion } from "framer-motion";
+
+const About = () => {
+  return (
+    <section className="bg-[#121212] text-white py-20 px-6 md:px-20">
+      <div className="max-w-5xl mx-auto text-center">
+        
+        {/* Heading */}
+        <motion.h2
+          className="text-[3vw] font-extrabold text-[#F1E24] tracking-wide"
+          initial={{ y: -50, opacity: 0 }}
+          whileInView={{ y: 0, opacity: 1 }}
+          transition={{ duration: 0.8, ease: "easeOut" }}
+          viewport={{ once: true }}
+        >
+          About Me
+        </motion.h2>
+
+        {/* Introduction */}
+        <motion.p
+          className="mt-6 text-[1.3vw] text-gray-300 leading-relaxed tracking-wide"
+          initial={{ y: 20, opacity: 0 }}
+          whileInView={{ y: 0, opacity: 1 }}
+          transition={{ delay: 0.3, duration: 0.8 }}
+          viewport={{ once: true }}
+        >
+          Hey there! I’m <span className="text-[#F1E24] font-bold">Ashish Vishwakarma</span>,  
+          a **Full Stack Developer** who loves building things that make life easier.  
+          From **dynamic web apps** to **real-time applications**, I enjoy turning ideas into reality with clean and efficient code.
+        </motion.p>
+
+        {/* Skills */}
+        <motion.p
+          className="mt-6 text-[1.2vw] text-gray-300 leading-relaxed tracking-wide"
+          initial={{ y: 20, opacity: 0 }}
+          whileInView={{ y: 0, opacity: 1 }}
+          transition={{ delay: 0.5, duration: 0.8 }}
+          viewport={{ once: true }}
+        >
+          **Tech I Work With:**  
+          🔹 **Frontend:** ReactJS, Tailwind CSS, Framer Motion  
+          🔹 **Backend:** Node.js, Express.js, MongoDB, Redis, Socket.io  
+          🔹 **Others:** API Development, Authentication, Caching  
+          I’m always exploring **new technologies** and love problem-solving.
+        </motion.p>
+
+        {/* Projects */}
+        <motion.p
+          className="mt-6 text-[1.2vw] text-gray-300 leading-relaxed tracking-wide"
+          initial={{ y: 20, opacity: 0 }}
+          whileInView={{ y: 0, opacity: 1 }}
+          transition={{ delay: 0.7, duration: 0.8 }}
+          viewport={{ once: true }}
+        >
+          **Some of My Work:**  
+          🚀 **Pinterest Clone** – A visual discovery platform  
+          🚀 **BlinkIt Clone** – A real-time grocery delivery app  
+          🚀 **Google Docs Clone** – A collaborative document editor  
+          Always working on new and exciting projects!
+        </motion.p>
+
+        {/* Career Goal */}
+        <motion.p
+          className="mt-6 text-[1.2vw] text-gray-300 leading-relaxed tracking-wide"
+          initial={{ y: 20, opacity: 0 }}
+          whileInView={{ y: 0, opacity: 1 }}
+          transition={{ delay: 0.9, duration: 0.8 }}
+          viewport={{ once: true }}
+        >
+          My goal? To work on **challenging and innovative projects** where I can contribute,  
+          grow, and collaborate with like-minded people. I love working on **scalable, high-performance applications**  
+          that solve real-world problems.
+        </motion.p>
+
+        {/* Call-to-Action */}
+        <motion.a
+          href="#contact"
+          className="mt-8 inline-block bg-[#F1E24] text-black px-8 py-4 font-bold text-[1.2vw] rounded-full 
+          transition duration-300 hover:bg-yellow-400 hover:shadow-lg hover:scale-105"
+          initial={{ scale: 0.8, opacity: 0 }}
+          whileInView={{ scale: 1, opacity: 1 }}
+          transition={{ delay: 1, duration: 0.5 }}
+          viewport={{ once: true }}
+        >
+          Let’s Build Something Awesome!
+        </motion.a>
+
+      </div>
+    </section>
+  );
+};
+
 export default About;
+
+
+
 

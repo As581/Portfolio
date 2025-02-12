@@ -75,7 +75,7 @@ const Projects = () => {
 };
 
 export default Projects;*/
-import { motion } from "framer-motion";
+/*import { motion } from "framer-motion";
 
 const projects = [
   {
@@ -106,7 +106,7 @@ const projects = [
     title: "FETCHMOVIE - TMDB API Project",
     description:
       "Built a responsive movie app using React, Redux, and Tailwind CSS. Integrated Redux for API fetching and displayed dynamic movie and TV show data.",
-    img: "",
+    img: "/public/fetch.jpg",
     live: "https://fetchmovie.vercel.app/",
     github: "https://github.com/As581/MovieTmdb",
   },
@@ -116,7 +116,7 @@ const Projects = () => {
   return (
     <section className="bg-[#121212] text-[#E0E0E0] py-16">
       <div className="max-w-6xl mx-auto px-6 text-center">
-        {/* Header */}
+        //Header 
         <div className="flex flex-col items-center gap-4">
           <div className="flex items-center gap-4">
             <div className="w-[1.5vw] h-[1.5vw] bg-white rounded-full"></div>
@@ -125,7 +125,7 @@ const Projects = () => {
           <div className="w-[3vw] h-[5px] bg-white"></div>
         </div>
 
-        {/* Projects Grid */}
+        //Projects Grid 
         <div className="grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-10">
           {projects.map((project, index) => (
             <motion.div
@@ -169,5 +169,117 @@ const Projects = () => {
   );
 };
 
+export default Projects;*/
+
+import { motion } from "framer-motion";
+
+const projects = [
+  {
+    title: "LiveChat - Face To Face Chatting",
+    description:
+      "Real-time video calling app with private rooms and random partner pairing. Built using WebRTC, Socket.io, and Node.js.",
+    img: "/public/live.jpg",
+    live: "https://livechat-G2cg.onrender.com/",
+    github: "https://github.com/As581/Omegle_Proj",
+  },
+  {
+    title: "BlinkIt Clone - Speed Commerce",
+    description:
+      "An e-commerce platform with authentication, cart management, payment gateway, and Redis caching for optimized performance.",
+    img: "/public/blink.jpg",
+    live: "https://blinkit-Kc9u.onrender.com/",
+    github: "https://github.com/As581/BlinkI",
+  },
+  {
+    title: "DevTube - A YouTube Alternative",
+    description:
+      "A real-time video platform with user authentication, video uploads, and live streaming features using Express.js and Socket.io.",
+    img: "/public/dev.jpg",
+    live: "https://devtube-wih8.onrender.com/",
+    github: "https://github.com/As581/DevTube",
+  },
+  {
+    title: "FetchMovie - TMDB API Project",
+    description:
+      "A movie database app using React, Redux, and Tailwind CSS, featuring dynamic search and trending movie details.",
+    img: "/public/fetch.jpg",
+    live: "https://fetchmovie.vercel.app/",
+    github: "https://github.com/As581/MovieTmdb",
+  },
+];
+
+const Projects = () => {
+  return (
+    <section className="bg-[#121212] text-[#E0E0E0] py-20 px-6">
+      <div className="max-w-6xl mx-auto text-center">
+        
+        {/* Animated Heading */}
+        <motion.h2
+          className="text-[3vw] font-extrabold text-[#F1E24] tracking-wide"
+          initial={{ y: -30, opacity: 0 }}
+          whileInView={{ y: 0, opacity: 1 }}
+          transition={{ duration: 0.8, ease: "easeOut" }}
+          viewport={{ once: true }}
+        >
+          My Projects 🚀
+        </motion.h2>
+
+        {/* Animated Underline */}
+        <motion.div
+          className="w-[5vw] h-[5px] bg-[#F1E24] mx-auto mt-3"
+          initial={{ scaleX: 0 }}
+          whileInView={{ scaleX: 1 }}
+          transition={{ duration: 0.6, ease: "easeOut" }}
+          viewport={{ once: true }}
+        ></motion.div>
+
+        {/* Project Grid */}
+        <div className="mt-12 grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+          {projects.map((project, index) => (
+            <motion.div
+              key={index}
+              whileHover={{ scale: 1.05 }}
+              transition={{ duration: 0.3 }}
+              className="bg-[#1E1E1E] rounded-lg overflow-hidden shadow-lg p-6 border border-gray-700 
+              hover:border-[#F1E24] transition-all duration-300 hover:shadow-lg"
+            >
+              <img
+                src={project.img}
+                alt={project.title}
+                className="w-full h-48 object-cover rounded-md shadow-md"
+              />
+              <div className="p-4">
+                <h3 className="text-2xl font-semibold text-[#F1E24]">{project.title}</h3>
+                <p className="text-gray-400 mt-3">{project.description}</p>
+                <div className="mt-5 flex justify-center gap-5">
+                  <a
+                    href={project.live}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="bg-[#F1E24] text-[#121212] px-5 py-3 rounded-md font-bold hover:bg-[#d9c221] 
+                    transition-all duration-300 shadow-md"
+                  >
+                    Live Demo
+                  </a>
+                  <a
+                    href={project.github}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="bg-gray-700 text-white px-5 py-3 rounded-md font-bold hover:bg-gray-600 
+                    transition-all duration-300 shadow-md"
+                  >
+                    GitHub
+                  </a>
+                </div>
+              </div>
+            </motion.div>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+};
+
 export default Projects;
+
 
