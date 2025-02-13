@@ -1,15 +1,15 @@
-import React, { useState } from 'react';
-import Hero from './components/Hero.jsx';
-import About from './components/About.jsx';
-import Education from './components/Education.jsx';
-import Skills from './components/Skills.jsx';
-import Projects from './components/Projects.jsx';
-import Contact from './components/Contact.jsx';
-import Working from './components/MyWorkingProcess.jsx';
-import Loading from './components/Loading.jsx';
-import useLenis from './Hooks/UseLenis.jsx';
-import Navbar from './components/Navbar.jsx';
-import Footer from './components/Footer.jsx';
+import React, { useState } from "react";
+import Hero from "./components/Hero.jsx";
+import About from "./components/About.jsx";
+import Education from "./components/Education.jsx";
+import Skills from "./components/Skills.jsx";
+import Projects from "./components/Projects.jsx";
+import Contact from "./components/Contact.jsx";
+import Working from "./components/MyWorkingProcess.jsx";
+import Loading from "./components/Loading.jsx";
+import useLenis from "./Hooks/useLenis.jsx";
+import Navbar from "./components/Navbar.jsx";
+import Footer from "./components/Footer.jsx";
 
 function App() {
   useLenis();
@@ -34,7 +34,7 @@ function App() {
           <div id="skills">
             <Skills />
           </div>
-          <div>
+          <div id="working">
             <Working />
           </div>
           <div id="projects">
