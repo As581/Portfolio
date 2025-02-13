@@ -63,7 +63,6 @@ const Loading = ({ onComplete }) => {
       animate={progress === 100 ? { y: "-100%" } : {}}
       transition={{ duration: 0.5, ease: "easeInOut" }}
     >
-      {/* Logo with Smooth Transition from Grey to White */}
       <motion.img
         src={logo}
         alt="Logo"
@@ -79,6 +78,7 @@ const Loading = ({ onComplete }) => {
 };
 
 export default Loading;
+
 
 
 

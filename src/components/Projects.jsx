@@ -210,7 +210,7 @@ const projects = [
 
 const Projects = () => {
   return (
-    <section className="bg-[#121212] text-[#E0E0E0] py-20 px-6">
+    <section className="bg-gradient-to-b from-[#121212] via-[#1e1e1e] to-[#121212] text-[#E0E0E0] py-20 px-6">
       <div className="max-w-6xl mx-auto text-center">
         
         {/* Animated Heading */}

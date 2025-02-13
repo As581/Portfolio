@@ -73,16 +73,28 @@ const Navbar = () => {
 
 export default Navbar;*/
 import { motion } from "framer-motion";
-import { Link } from "react-scroll";
 import { useState } from "react";
 import { FaBars, FaTimes } from "react-icons/fa";
+import { useLenis } from "@studio-freight/react-lenis";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const lenis = useLenis();
 
+  // Lenis scroll function
+  const scrollToSection = (id) => {
+  const section = document.getElementById(id);
+  if (section) {
+    section.scrollIntoView({ behavior: "smooth" });
+  } else {
+    console.error(`Section with ID "${id}" not found!`);
+  }
+};
+
+  
   return (
     <motion.nav
-      className="w-full px-6 lg:px-[4vw] py-4 flex justify-between items-center fixed top-0 z-50 shadow-lg bg-[#121212]"
+      className="w-full px-6 lg:px-[4vw] py-4 flex justify-between items-center fixed top-0 z-50 shadow-lg bg-transparent"
       initial={{ y: -50, opacity: 0 }}
       animate={{ y: 0, opacity: 1 }}
       transition={{ duration: 0.5 }}
@@ -96,14 +108,12 @@ const Navbar = () => {
       <ul className="hidden lg:flex space-x-8 text-[#E0E0E0] font-medium">
         {["about", "skills", "projects", "education", "contact"].map((item) => (
           <li key={item}>
-            <Link
-              to={item}
-              smooth={true}
-              duration={500}
+            <button
+              onClick={() => scrollToSection(item)}
               className="cursor-pointer hover:text-[#F1E24] transition duration-300"
             >
               {item.charAt(0).toUpperCase() + item.slice(1)}
-            </Link>
+            </button>
           </li>
         ))}
       </ul>
@@ -143,16 +153,13 @@ const Navbar = () => {
         </button>
 
         {["about", "skills", "projects", "education", "contact"].map((item) => (
-          <Link
+          <button
             key={item}
-            to={item}
-            smooth={true}
-            duration={500}
-            onClick={() => setIsOpen(false)}
+            onClick={() => scrollToSection(item)}
             className="cursor-pointer hover:text-[#F1E24] transition duration-300"
           >
             {item.charAt(0).toUpperCase() + item.slice(1)}
-          </Link>
+          </button>
         ))}
       </motion.div>
     </motion.nav>
@@ -160,6 +167,10 @@ const Navbar = () => {
 };
 
 export default Navbar;
+
+
+
+
 
 
 

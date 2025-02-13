@@ -82,8 +82,9 @@ const Contact = () => {
 };
 
 export default Contact;*/
-import { motion } from "framer-motion";
+/*import { motion } from "framer-motion";
 import { useState } from "react";
+
 
 const Contact = () => {
   const [form, setForm] = useState({ name: "", email: "", message: "" });
@@ -107,7 +108,7 @@ const Contact = () => {
 
   return (
     <motion.section
-      className="min-h-screen flex justify-center items-center bg-[#121212] px-6 py-20"
+      className="bg-gradient-to-t  from-[#121212] to-[#1e1e1e] min-h-screen flex justify-center items-center bg-[#121212] px-6 py-20"
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       transition={{ duration: 0.5 }}
@@ -193,5 +194,81 @@ const Contact = () => {
   );
 };
 
+export default Contact;*/
+import React from "react";
+import { motion } from "framer-motion";
+
+const Contact = () => {
+  return (
+    <div className="min-h-screen flex justify-center items-center px-6 bg-gradient-to-b from-[#121212] to-[#1e1e1e]">
+      <div className="bg-[#1e1e1e] p-10 rounded-xl shadow-lg max-w-2xl w-full text-[#E0E0E0]">
+        
+        {/* Heading */}
+        <motion.h2 
+          className="text-3xl font-bold text-center text-[#E0E0E0]  mb-6"
+          initial={{ opacity: 0, y: -30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5 }}
+        >
+          Let's Connect
+        </motion.h2>
+
+        {/* Form */}
+        <form className="space-y-4">
+          {/* Name */}
+          <div>
+            <label className="block text-gray-300">Full Name</label>
+            <input
+              type="text"
+              placeholder="Enter your name"
+              className="w-full p-3 bg-[#2e2e2e] rounded-md border border-gray-600 focus:outline-none focus:ring-2 focus:ring-[#FACC15] text-[#E0E0E0]"
+            />
+          </div>
+
+          {/* Email */}
+          <div>
+            <label className="block text-gray-300">Email</label>
+            <input
+              type="email"
+              placeholder="Enter your email"
+              className="w-full p-3 bg-[#2e2e2e] rounded-md border border-gray-600 focus:outline-none focus:ring-2 focus:ring-[#FACC15] text-[#E0E0E0]"
+            />
+          </div>
+
+          {/* Message */}
+          <div>
+            <label className="block text-gray-300">Message</label>
+            <textarea
+              rows="4"
+              placeholder="Write your message..."
+              className="w-full p-3 bg-[#2e2e2e] rounded-md border border-gray-600 focus:outline-none focus:ring-2 focus:ring-[#FACC15] text-[#E0E0E0]"
+            ></textarea>
+          </div>
+
+          {/* Submit Button */}
+          <motion.button
+            type="submit"
+            className="w-full text-[#E0E0E0] text-black font-semibold py-3 rounded-md hover:bg-[#FACC15] transition"
+            whileHover={{ scale: 1.05 }}
+          >
+            Send Message
+          </motion.button>
+        </form>
+
+        {/* Contact Info */}
+        <div className="mt-6 text-center text-gray-400">
+          <p>Email: <a href="mailto:av0232016@gmail.com" className="text-[#FACC15]">av0232016@gmail.com</a></p>
+          <p>Phone: <a href="tel:+1234567890" className="text-[#FACC15]">+91 9324302573</a></p>
+        </div>
+      </div>
+    </div>
+  );
+};
+
 export default Contact;
+
+
+
+
+
 

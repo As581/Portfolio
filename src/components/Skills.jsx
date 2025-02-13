@@ -154,7 +154,7 @@ const skills = [
 
 const Skills = () => {
   return (
-    <section className="bg-[#121212] text-[#E0E0E0] py-20">
+    <section className="bg-gradient-to-b  from-[#121212] to-[#1e1e1e] bg-gradient-to-t  from-[#121212] to-[#1e1e1e]  text-[#E0E0E0] py-20">
       <div className="max-w-6xl mx-auto px-6 text-center">
         
         {/* Animated Heading */}
