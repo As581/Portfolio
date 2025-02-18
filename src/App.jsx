@@ -1,19 +1,21 @@
-import React, { useState } from "react";
+import React, { useState} from "react";
 import Hero from "./components/Hero.jsx";
 import About from "./components/About.jsx";
 import Education from "./components/Education.jsx";
 import Skills from "./components/Skills.jsx";
 import Projects from "./components/Projects.jsx";
-import Contact from "./components/Contact.jsx";
+import Contact2 from "./components/Contact2.jsx";
 import Working from "./components/MyWorkingProcess.jsx";
 import Loading from "./components/Loading.jsx";
-import useLenis from "./Hooks/useLenis.jsx";
-import Navbar from "./components/Navbar.jsx";
+//import useLenis from "./Hooks/useLenis.jsx";
+import Navbar2 from "./components/Navbar2.jsx";
 import Footer from "./components/Footer.jsx";
+//import LocomotiveScroll from 'locomotive-scroll';
+
 
 function App() {
-  useLenis();
   const [loading, setLoading] = useState(true);
+ // const locomotiveScroll = new LocomotiveScroll();
 
   return (
     <>
@@ -21,7 +23,7 @@ function App() {
         <Loading onComplete={() => setLoading(false)} />
       ) : (
         <>
-          <Navbar />
+          <Navbar2 />
           <div id="hero">
             <Hero />
           </div>
@@ -41,7 +43,7 @@ function App() {
             <Projects />
           </div>
           <div id="contact">
-            <Contact />
+            <Contact2 />
           </div>
           <Footer />
         </>
