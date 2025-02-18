@@ -94,7 +94,7 @@ const Navbar = () => {
   
   return (
     <motion.nav
-      className="w-full px-6 lg:px-[4vw] py-4 flex justify-between items-center fixed top-0 z-50 shadow-lg bg-transparent"
+      className="w-full px-6 lg:px-[4vw] py-4 flex justify-between items-center fixed to-0 z-50 shadow-lg bg-[#121212]"
       initial={{ y: -50, opacity: 0 }}
       animate={{ y: 0, opacity: 1 }}
       transition={{ duration: 0.5 }}

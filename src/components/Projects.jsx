@@ -202,7 +202,7 @@ const projects = [
     title: "FetchMovie - TMDB API Project",
     description:
       "A movie database app using React, Redux, and Tailwind CSS, featuring dynamic search and trending movie details.",
-    img: "/public/fetch.jpg",
+    img: "/public/Fetch.jpg",
     live: "https://fetchmovie.vercel.app/",
     github: "https://github.com/As581/MovieTmdb",
   },
@@ -210,7 +210,7 @@ const projects = [
 
 const Projects = () => {
   return (
-    <section className="bg-gradient-to-b from-[#121212] via-[#1e1e1e] to-[#121212] text-[#E0E0E0] py-20 px-6">
+    <section className="bg-gradient-to-b from-[#121212] via-[#1e1e1e] to-[#121212] text-[#E0E0E0] py-10 px-6">
       <div className="max-w-6xl mx-auto text-center">
         
         {/* Animated Heading */}
@@ -256,7 +256,7 @@ const Projects = () => {
                     href={project.live}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="bg-[#F1E24] text-[#121212] px-5 py-3 rounded-md font-bold hover:bg-[#d9c221] 
+                    className="bg-[#F1E24] text-white px-5 py-3 rounded-md font-bold hover:bg-[#d9c221] 
                     transition-all duration-300 shadow-md"
                   >
                     Live Demo

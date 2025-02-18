@@ -26,17 +26,15 @@ const processSteps = [
 
 const MyWorkingProcess = () => {
   return (
-    <div className="min-h-screen flex justify-center items-center bg-gradient-to-b from-[#121212] via-[#1e1e1e] to-[#121212] text-[#E0E0E0]">
+    <div className="w-screen min-h-screen flex justify-center items-center bg-gradient-to-b from-[#121212] via-[#1e1e1e] to-[#121212] text-[#E0E0E0]">
       <div className="max-w-5xl mx-auto px-6 py-12">
         {/* Heading Section */}
         <div className="flex flex-col items-center gap-4 mb-12">
           <div className="flex items-center gap-4">
-            <div className="w-4 h-4 bg-white rounded-full"></div>
             <h2 className="text-3xl sm:text-4xl font-bold text-[#F1E24]">
               My Working Process
             </h2>
           </div>
-          <div className="w-12 h-[4px] bg-white"></div>
         </div>
 
         {/* Timeline Section */}

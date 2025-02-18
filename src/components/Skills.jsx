@@ -150,6 +150,8 @@ const skills = [
   { name: "Adobe XD", img: "/public/Xd.png", level: "Proficient" },
   { name: "Photoshop", img: "/public/Photo.png", level: "Proficient" },
   { name: "Figma", img: "/public/Figma.png", level: "Expert" },
+    { name: "Redux", img: "Redux.png", level: "Intermediate" },
+     { name: "GitHub", img: "Git.png", level: "Intermediate" }
 ];
 
 const Skills = () => {

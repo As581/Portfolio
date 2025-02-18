@@ -120,7 +120,7 @@ import { motion } from "framer-motion";
 
 const About = () => {
   return (
-    <section className="bg-[#121212] text-white py-20 px-6 md:px-20">
+    <section className=" w-screen h-screen bg-[#121212] text-white py-20 px-6 md:px-20">
       <div className="max-w-5xl mx-auto text-center">
         
         {/* Heading */}

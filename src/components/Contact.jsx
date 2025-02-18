@@ -200,7 +200,7 @@ import { motion } from "framer-motion";
 
 const Contact = () => {
   return (
-    <div className="min-h-screen flex justify-center items-center px-6 bg-gradient-to-b from-[#121212] to-[#1e1e1e]">
+    <div className="min-h-screen flex justify-center items-center px-6 bg-gradient-to-b from-[#121212] to-[#1e1e1e] mt-[8vw]">
       <div className="bg-[#1e1e1e] p-10 rounded-xl shadow-lg max-w-2xl w-full text-[#E0E0E0]">
         
         {/* Heading */}
