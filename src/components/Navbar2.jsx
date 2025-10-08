@@ -46,7 +46,7 @@ const Navbar2 = () => {
     >
       {/* ✅ Logo Section */}
       <div className="flex items-center text-[#F1E24] text-2xl font-bold">
-        <img className="w-16 h-auto" src="/public/Logo.png" alt="Logo" />
+        <img className="w-16 h-auto" src="/Logo.png" alt="Logo" />
       </div>
 
       {/* ✅ Navigation Links (Desktop) */}
