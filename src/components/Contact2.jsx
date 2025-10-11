@@ -93,4 +93,4 @@ const Contact2 = () => {
   );
 };
 
-export default Contact2;
+export default Contact2;          
