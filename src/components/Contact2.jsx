@@ -19,17 +19,16 @@ const Contact = () => {
     setLoading(true);
     setStatus(""); // Reset status before sending
 
-    emailjs
-      .send(
-        "service_smk3xp6", // ✅ Replace with your EmailJS Service ID
-        "template_au38rzq", // ✅ Replace with your EmailJS Template ID
-        {
-          from_name: form.name,
-          message: form.message,
-          to_email: "av0232016@gmail.com", // ✅ Replace with your email
-        },
-        "p43i1Qz7oFmq37zNs" // ✅ Replace with your EmailJS Public Key
-      )
+    emailjs.send(
+  import.meta.env.VITE_EMAILJS_SERVICE_ID,
+  import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
+  {
+    from_name: form.name,
+    message: form.message,
+    to_email: "av0232016@gmail.com",
+  },
+  import.meta.env.VITE_EMAILJS_PUBLIC_KEY
+)
       .then(
         (response) => {
           setStatus("✅ Email Sent Successfully!"); // ✅ Success Message
