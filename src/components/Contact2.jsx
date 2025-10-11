@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-const Contact = () => {
+const Contact2 = () => {
   const [result, setResult] = useState("");
   const [loading, setLoading] = useState(false);
 
@@ -166,6 +166,6 @@ export default Contact;        (error) => {
   );
 };
 
-export default Contact;
+export default Contact2;
 
 
