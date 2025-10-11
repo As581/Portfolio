@@ -10,7 +10,8 @@ const Contact2 = () => {
     setResult("Sending...");
 
     const formData = new FormData(event.target);
-    formData.append("access_key", "0238eb23-f6e9-4fdb-a3cf-8f9d0a2ccb40"); // ✅ Replace with your Web3Forms access key
+    formData.append("access_key", "0238eb23-f6e9-4fdb-a3cf-8f9d0a2ccb40"); // Web3Forms Access Key
+    formData.append("email", "av0232016@gmail.com"); // ✅ Your email auto-send
 
     const response = await fetch("https://api.web3forms.com/submit", {
       method: "POST",
@@ -20,7 +21,7 @@ const Contact2 = () => {
     const data = await response.json();
 
     if (data.success) {
-      setResult("✅ Form Submitted Successfully!");
+      setResult("✅ Message Sent Successfully!");
       event.target.reset();
     } else {
       console.log("Error", data);
@@ -49,15 +50,9 @@ const Contact2 = () => {
             />
           </div>
 
-          <div>
-            <label className="block text-gray-300">Email</label>
-            <input
-              type="email"
-              name="email"
-              placeholder="Enter your email"
-              className="w-full p-3 bg-[#2e2e2e] rounded-md border border-gray-600 focus:outline-none focus:ring-2 focus:ring-[#FACC15] text-[#E0E0E0]"
-              required
-            />
+          <div className="hidden">
+            {/* Hidden email field */}
+            <input type="email" name="email" value="av0232016@gmail.com" readOnly />
           </div>
 
           <div>
