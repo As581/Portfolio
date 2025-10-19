@@ -11,7 +11,7 @@ import Loading from "./components/Loading.jsx";
 import Navbar2 from "./components/Navbar2.jsx";
 import Footer from "./components/Footer.jsx";
 //import LocomotiveScroll from 'locomotive-scroll';
-//import Bharat from "./components/Bharat.jsx";
+import Bharat from "./components/Bharat.jsx";
 
 function App() {
   const [loading, setLoading] = useState(true);
@@ -41,6 +41,9 @@ function App() {
           </div>
           <div id="projects">
             <Projects />
+          </div>
+          <div id="bharat">
+              <Bharat />
           </div>
           <div id="contact">
             <Contact2 />
