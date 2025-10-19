@@ -13,11 +13,11 @@ const Bharat = () => {
   }, []);
 
   return (
-    <div className="relative min-h-screen flex flex-col justify-center items-center text-white text-center bg-gradient-to-b from-[#121212] to-[#1e1e1e] overflow-hidden">
+    <div className="relative min-h-screen flex flex-col justify-center items-center text-white text-center bg-gradient-to-b from-[#121212] via-[#1a1a1a] to-[#0e0e0e] overflow-hidden">
       
       {/* ✨ Subtle Moving Glow */}
       <motion.div
-        className="absolute w-[600px] h-[600px] rounded-full bg-[#FFD700] opacity-10 blur-[200px]"
+        className="absolute w-[600px] h-[600px] rounded-full bg-[#FFD700] opacity-5 blur-[200px]"
         style={{
           transform: `translate(${mousePos.x * 0.02}px, ${mousePos.y * 0.02}px)`,
         }}
@@ -25,7 +25,7 @@ const Bharat = () => {
 
       {/* 🚀 Title */}
       <motion.h1
-        className="text-6xl lg:text-8xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-[#FFD700] to-[#ff9100] drop-shadow-[0_0_25px_rgba(255,215,0,0.5)]"
+        className="text-6xl lg:text-8xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-[#FFD700] to-[#ff9100] drop-shadow-[0_0_20px_rgba(255,215,0,0.4)]"
         initial={{ opacity: 0, y: 30 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 1.2 }}
