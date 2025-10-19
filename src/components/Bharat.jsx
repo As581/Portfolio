@@ -13,26 +13,26 @@ const Bharat = () => {
   }, []);
 
   return (
-    <div className="relative min-h-screen flex flex-col justify-center items-center text-white text-center bg-gradient-to-b from-[#0e0e0e] via-[#1b1003] to-[#0a0a0a] overflow-hidden">
+    <div className="relative min-h-screen flex flex-col justify-center items-center text-white text-center bg-gradient-to-b from-[#121212] to-[#1e1e1e] overflow-hidden">
       
-      {/* 🔥 Dynamic Golden Aura */}
+      {/* 🔥 Soft Moving Golden Aura */}
       <motion.div
-        className="absolute w-[900px] h-[900px] rounded-full bg-gradient-to-tr from-[#FFD700] via-[#ffb300] to-[#ff9100] opacity-20 blur-[180px]"
+        className="absolute w-[900px] h-[900px] rounded-full bg-gradient-to-tr from-[#FFD700] via-[#ffb300] to-[#ff9100] opacity-10 blur-[200px]"
         style={{
           transform: `translate(${mousePos.x * 0.03}px, ${mousePos.y * 0.03}px)`,
         }}
       />
 
-      {/* ✨ Tricolor Ambient Glow */}
+      {/* ✨ Subtle Tricolor Ambient Layer */}
       <motion.div
-        className="absolute inset-0 bg-[radial-gradient(circle_at_30%_30%,rgba(255,152,0,0.15),transparent_70%),radial-gradient(circle_at_70%_70%,rgba(19,136,8,0.15),transparent_70%)]"
-        animate={{ opacity: [0.6, 1, 0.6] }}
+        className="absolute inset-0 bg-[radial-gradient(circle_at_20%_30%,rgba(255,153,51,0.12),transparent_70%),radial-gradient(circle_at_80%_70%,rgba(19,136,8,0.12),transparent_70%)]"
+        animate={{ opacity: [0.6, 0.9, 0.6] }}
         transition={{ duration: 6, repeat: Infinity }}
       />
 
-      {/* 🚀 Title */}
+      {/* 🚀 Main Title */}
       <motion.h1
-        className="text-6xl lg:text-8xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-[#ff9933] via-[#FFD700] to-[#138808] drop-shadow-[0_0_35px_rgba(255,200,0,0.8)]"
+        className="text-6xl lg:text-8xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-[#ff9933] via-[#FFD700] to-[#138808] drop-shadow-[0_0_35px_rgba(255,215,0,0.8)]"
         initial={{ opacity: 0, y: 40 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 1.2 }}
@@ -42,7 +42,7 @@ const Bharat = () => {
 
       {/* 📜 Sanskrit Quote */}
       <motion.p
-        className="mt-6 text-2xl lg:text-3xl text-[#f0e6c0] italic font-medium leading-relaxed drop-shadow-[0_0_10px_rgba(255,255,255,0.3)]"
+        className="mt-6 text-2xl lg:text-3xl text-[#f5e4b8] italic font-semibold leading-relaxed drop-shadow-[0_0_15px_rgba(255,255,255,0.3)]"
         initial={{ opacity: 0, y: 40 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 1.5 }}
@@ -50,9 +50,9 @@ const Bharat = () => {
         "संस्कृतेन सह भारतस्य नवयुगम्।"
       </motion.p>
 
-      {/* 🌟 English Subtitle */}
+      {/* 🌟 English Mission Subtitle */}
       <motion.p
-        className="mt-3 text-lg lg:text-xl text-gray-300 font-semibold tracking-wide"
+        className="mt-3 text-lg lg:text-xl text-gray-300 font-medium tracking-wide"
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ delay: 1.2, duration: 1 }}
@@ -62,15 +62,15 @@ const Bharat = () => {
         <span className="text-[#138808]">Creativity</span>.
       </motion.p>
 
-      {/* 🌸 Tagline */}
+      {/* 🌸 Description / Tagline */}
       <motion.p
-        className="mt-6 text-base lg:text-lg text-gray-400 max-w-3xl px-6 leading-relaxed"
+        className="mt-8 text-base lg:text-lg text-gray-400 max-w-3xl px-6 leading-relaxed"
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ delay: 1.5, duration: 1 }}
       >
-        A digital movement reviving the soul of India — where art, technology, and
-        heritage unite to illuminate a new era of Bharat.
+        A movement uniting developers, designers, artists & innovators — 
+        to digitally revive the timeless beauty of Bharat’s culture, temples & heritage.
       </motion.p>
 
       {/* 🔗 Buttons */}
@@ -88,7 +88,7 @@ const Bharat = () => {
         </button>
       </motion.div>
 
-      {/* 🌅 Sanskrit Aura Footer */}
+      {/* 🌅 Sanskrit Footer Aura */}
       <motion.div
         className="absolute bottom-10 text-[#f1e4a3] text-sm italic opacity-80"
         initial={{ opacity: 0 }}
