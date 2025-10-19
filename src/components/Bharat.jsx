@@ -13,7 +13,7 @@ const Bharat = () => {
   }, []);
 
   return (
-    <div className="relative min-h-screen flex flex-col justify-center items-center text-white text-center bg-gradient-to-b from-[#121212] to-[#1e1e1e] overflow-hidden">
+    <div className="relative min-h-screen flex flex-col justify-center items-center text-white text-center  overflow-hidden">
       
       {/* 🔥 Soft Moving Golden Aura */}
       <motion.div
