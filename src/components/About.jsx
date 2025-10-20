@@ -1,199 +1,83 @@
-{/*import { motion } from "framer-motion";
-
-const About = () => {
-  return (
-    <section className=" bg-[#121212] text-white py-16 px-6 md:px-20">
-      <div className="max-w-5xl mx-auto text-center">
-        
-        <motion.h2
-          className="text-[3.5vw] font-extrabold text-[#F1E24]"
-          initial={{ y: -50, opacity: 0 }}
-          animate={{ y: 0, opacity: 1 }}
-          transition={{ duration: 0.8, ease: "easeOut" }}
-        >
-          About Me
-        </motion.h2>
-
-
-        <motion.p
-          className="mt-4 text-lg text-gray-300 leading-relaxed"
-          initial={{ y: 20, opacity: 0 }}
-          animate={{ y: 0, opacity: 1 }}
-          transition={{ delay: 0.3, duration: 0.8 }}
-        >
-          Hi, I am <span className="text-[#F1E24] font-bold">Ashish Vishwakarma</span>, a passionate **Full Stack Developer** 🚀  
-          I love working with **ReactJS, NodeJS, ExpressJS, MongoDB, Tailwind CSS, Socket.io, Redis, Framer Motion**, and more.  
-        </motion.p>
-
-
-        <motion.p
-          className="mt-4 text-lg text-gray-300"
-          initial={{ y: 20, opacity: 0 }}
-          animate={{ y: 0, opacity: 1 }}
-          transition={{ delay: 0.5, duration: 0.8 }}
-        >
-          I have built projects like **Pinterest Clone, BlinkIt Clone, Google Docs Clone**,  
-          and I am always exploring **new technologies** to improve my skills.  
-          My goal is to create **fast, scalable, and user-friendly web applications** that make an impact.  
-        </motion.p>
-
-        <motion.a
-          href="#contact"
-          className="mt-6 inline-block bg-[#F1E24] text-black px-6 py-3 font-bold text-lg rounded-full transition duration-300 hover:bg-yellow-400"
-          initial={{ scale: 0.8, opacity: 0 }}
-          animate={{ scale: 1, opacity: 1 }}
-          transition={{ delay: 0.7, duration: 0.5 }}
-        >
-          Let's Connect!
-        </motion.a>
-
-      </div>
-    </section>
-  );
-};
-
-export default About; */}
-/*import { motion } from "framer-motion";
-
-const About = () => {
-  return (
-    <section className="bg-[#121212] text-white py-20 px-6 md:px-20">
-      <div className="max-w-5xl mx-auto text-center">
-        
-        <motion.h2
-          className="text-[3vw] font-extrabold text-[#F1E24] tracking-wide"
-          initial={{ y: -50, opacity: 0 }}
-          whileInView={{ y: 0, opacity: 1 }}
-          transition={{ duration: 0.8, ease: "easeOut" }}
-          viewport={{ once: true }}
-        >
-          About Me
-        </motion.h2>
-
-        // Animated Subheading 
-        <motion.p
-          className="mt-6 text-[1.3vw] text-gray-300 leading-relaxed tracking-wide"
-          initial={{ y: 20, opacity: 0 }}
-          whileInView={{ y: 0, opacity: 1 }}
-          transition={{ delay: 0.3, duration: 0.8 }}
-          viewport={{ once: true }}
-        >
-          Hi, I am <span className="text-[#F1E24] font-bold">Ashish Vishwakarma</span>, a passionate  
-          <span className="text-[#F1E24]"> Full Stack Developer</span> 🚀  
-          Skilled in **ReactJS, NodeJS, ExpressJS, MongoDB, Tailwind CSS, Socket.io, Redis, Framer Motion,** and more.  
-        </motion.p>
-
-        // Animated Description 
-        <motion.p
-          className="mt-6 text-[1.2vw] text-gray-300 leading-relaxed tracking-wide"
-          initial={{ y: 20, opacity: 0 }}
-          whileInView={{ y: 0, opacity: 1 }}
-          transition={{ delay: 0.5, duration: 0.8 }}
-          viewport={{ once: true }}
-        >
-          I have developed projects like:  
-          <span className="text-[#F1E24] font-semibold"> Pinterest Clone, BlinkIt Clone, Google Docs Clone, </span>  
-          and I am always exploring **new technologies** to improve my skills.  
-          My goal is to build **fast, scalable, and user-friendly applications** that make an impact.  
-        </motion.p>
-
-        // Call-to-Action Button 
-        <motion.a
-          href="#contact"
-          className="mt-8 inline-block bg-[#F1E24] text-black px-8 py-4 font-bold text-[1.2vw] rounded-full 
-          transition duration-300 hover:bg-yellow-400 hover:shadow-lg hover:scale-105"
-          initial={{ scale: 0.8, opacity: 0 }}
-          whileInView={{ scale: 1, opacity: 1 }}
-          transition={{ delay: 0.7, duration: 0.5 }}
-          viewport={{ once: true }}
-        >
-          Let's Connect!
-        </motion.a>
-
-      </div>
-    </section>
-  );
-};
-
-export default About;*/
 import { motion } from "framer-motion";
 
 const About = () => {
   return (
-    <section className=" w-screen h-screen bg-[#121212] text-white py-20 px-6 md:px-20">
+    <section className="w-screen min-h-screen bg-[#121212] text-white py-16 px-6 sm:px-10 md:px-20 flex justify-center items-center">
       <div className="max-w-5xl mx-auto text-center">
-        
-        {/* Heading */}
+
+        {/* 🌟 Heading */}
         <motion.h2
-          className="text-[3vw] font-extrabold text-[#F1E24] tracking-wide"
+          className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-[#FFD700] tracking-wide"
           initial={{ y: -50, opacity: 0 }}
           whileInView={{ y: 0, opacity: 1 }}
-          transition={{ duration: 0.8, ease: "easeOut" }}
+          transition={{ duration: 0.8, ease: 'easeOut' }}
           viewport={{ once: true }}
         >
           About Me
         </motion.h2>
 
-        {/* Introduction */}
+        {/* 👋 Introduction */}
         <motion.p
-          className="mt-6 text-[1.3vw] text-gray-300 leading-relaxed tracking-wide"
+          className="mt-6 text-sm sm:text-base md:text-lg text-gray-300 leading-relaxed tracking-wide"
           initial={{ y: 20, opacity: 0 }}
           whileInView={{ y: 0, opacity: 1 }}
           transition={{ delay: 0.3, duration: 0.8 }}
           viewport={{ once: true }}
         >
-          Hey there! I’m <span className="text-[#F1E24] font-bold">Ashish Vishwakarma</span>,  
-          a **Full Stack Developer** who loves building things that make life easier.  
-          From **dynamic web apps** to **real-time applications**, I enjoy turning ideas into reality with clean and efficient code.
+          Hey there! I’m <span className="text-[#FFD700] font-bold">Ashish Vishwakarma</span>,  
+          a <span className="font-semibold">Full Stack Developer</span> who loves building things that make life easier.  
+          From <span className="text-[#FFD700] font-semibold">dynamic web apps</span> to real-time applications,  
+          I enjoy turning ideas into reality with clean and efficient code.
         </motion.p>
 
-        {/* Skills */}
-        <motion.p
-          className="mt-6 text-[1.2vw] text-gray-300 leading-relaxed tracking-wide"
+        {/* 💻 Skills */}
+        <motion.div
+          className="mt-8 text-sm sm:text-base md:text-lg text-gray-300 leading-relaxed tracking-wide space-y-2"
           initial={{ y: 20, opacity: 0 }}
           whileInView={{ y: 0, opacity: 1 }}
           transition={{ delay: 0.5, duration: 0.8 }}
           viewport={{ once: true }}
         >
-          **Tech I Work With:**  
-          🔹 **Frontend:** ReactJS, Tailwind CSS, Framer Motion  
-          🔹 **Backend:** Node.js, Express.js, MongoDB, Redis, Socket.io  
-          🔹 **Others:** API Development, Authentication, Caching  
-          I’m always exploring **new technologies** and love problem-solving.
-        </motion.p>
+          <p className="font-semibold text-[#FFD700]">Tech I Work With:</p>
+          <p>⚡ <span className="text-[#FFD700]">Frontend:</span> ReactJS, Tailwind CSS, Framer Motion</p>
+          <p>⚙️ <span className="text-[#FFD700]">Backend:</span> Node.js, Express.js, MongoDB, Redis, Socket.io</p>
+          <p>🧠 <span className="text-[#FFD700]">Others:</span> API Development, Authentication, Caching</p>
+          <p>I’m always exploring new technologies and love solving problems creatively.</p>
+        </motion.div>
 
-        {/* Projects */}
-        <motion.p
-          className="mt-6 text-[1.2vw] text-gray-300 leading-relaxed tracking-wide"
+        {/* 🚀 Projects */}
+        <motion.div
+          className="mt-8 text-sm sm:text-base md:text-lg text-gray-300 leading-relaxed tracking-wide space-y-2"
           initial={{ y: 20, opacity: 0 }}
           whileInView={{ y: 0, opacity: 1 }}
           transition={{ delay: 0.7, duration: 0.8 }}
           viewport={{ once: true }}
         >
-          **Some of My Work:**  
-          🚀 **Pinterest Clone** – A visual discovery platform  
-          🚀 **BlinkIt Clone** – A real-time grocery delivery app  
-          🚀 **Google Docs Clone** – A collaborative document editor  
-          Always working on new and exciting projects!
-        </motion.p>
+          <p className="font-semibold text-[#FFD700]">Some of My Projects:</p>
+          <p>🚀 <span className="text-[#FFD700]">Pinterest Clone</span> – A visual discovery platform</p>
+          <p>🛒 <span className="text-[#FFD700]">BlinkIt Clone</span> – A real-time grocery delivery app</p>
+          <p>📝 <span className="text-[#FFD700]">Google Docs Clone</span> – A collaborative document editor</p>
+          <p>Always working on new and exciting ideas to push innovation forward.</p>
+        </motion.div>
 
-        {/* Career Goal */}
+        {/* 🎯 Career Goal */}
         <motion.p
-          className="mt-6 text-[1.2vw] text-gray-300 leading-relaxed tracking-wide"
+          className="mt-8 text-sm sm:text-base md:text-lg text-gray-300 leading-relaxed tracking-wide"
           initial={{ y: 20, opacity: 0 }}
           whileInView={{ y: 0, opacity: 1 }}
           transition={{ delay: 0.9, duration: 0.8 }}
           viewport={{ once: true }}
         >
-          My goal? To work on **challenging and innovative projects** where I can contribute,  
-          grow, and collaborate with like-minded people. I love working on **scalable, high-performance applications**  
-          that solve real-world problems.
+          My goal? To work on <span className="text-[#FFD700] font-semibold">challenging and innovative projects</span>  
+          where I can contribute, grow, and collaborate with passionate people.  
+          I aim to build <span className="text-[#FFD700] font-semibold">scalable, high-performance applications</span>  
+          that make a real-world impact.
         </motion.p>
 
-        {/* Call-to-Action */}
+        {/* 💬 Call-to-Action */}
         <motion.a
           href="#contact"
-          className="mt-8 inline-block bg-[#F1E24] text-black px-8 py-4 font-bold text-[1.2vw] rounded-full 
+          className="mt-10 inline-block bg-[#FFD700] text-black px-8 py-3 sm:px-10 sm:py-4 font-bold text-sm sm:text-base rounded-full 
           transition duration-300 hover:bg-yellow-400 hover:shadow-lg hover:scale-105"
           initial={{ scale: 0.8, opacity: 0 }}
           whileInView={{ scale: 1, opacity: 1 }}
@@ -209,7 +93,3 @@ const About = () => {
 };
 
 export default About;
-
-
-
-
