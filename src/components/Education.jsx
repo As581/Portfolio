@@ -177,29 +177,31 @@ const educationData = [
 
 const Education = () => {
   return (
-    <div className="bg-gradient-to-b from-[#121212] to-[#1e1e1e] text-[#E0E0E0] py-16">
-      <div className="max-w-4xl mx-auto px-6">
+    <div className="bg-gradient-to-b from-[#121212] to-[#1e1e1e] text-[#E0E0E0] py-16 px-4 sm:px-8 md:px-12">
+      <div className="max-w-4xl mx-auto">
         {/* Section Header */}
         <div className="flex flex-col items-center gap-4">
           <motion.div
             initial={{ opacity: 0, y: -20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
-            className="flex items-center gap-4"
+            className="flex items-center gap-3 sm:gap-4"
           >
-            <div className="w-4 h-4 bg-[#F1E24] rounded-full"></div>
-            <h2 className="text-[2.5vw] font-bold text-[#F1E24] tracking-wide">Education</h2>
+            <div className="w-3 h-3 sm:w-4 sm:h-4 bg-[#FFD700] rounded-full"></div>
+            <h2 className="text-[6vw] sm:text-[4vw] md:text-[2.5vw] font-bold text-[#FFD700] tracking-wide">
+              Education
+            </h2>
           </motion.div>
           <motion.div
             initial={{ scaleX: 0 }}
             animate={{ scaleX: 1 }}
             transition={{ duration: 0.5, ease: "easeOut" }}
-            className="w-12 h-[4px] bg-white"
+            className="w-10 sm:w-12 h-[3px] bg-white"
           ></motion.div>
         </div>
 
         {/* Timeline */}
-        <div className="relative border-l-4 border-[#F1E24] pl-6 mt-[4vw]">
+        <div className="relative border-l-4 border-[#FFD700] pl-6 mt-[8vw] sm:mt-[5vw] md:mt-[3vw]">
           {educationData.map((edu, index) => (
             <motion.div
               key={index}
@@ -210,18 +212,20 @@ const Education = () => {
               className="mb-10 relative group"
             >
               {/* Timeline Dot */}
-              <div className="absolute -left-3 w-6 h-6 bg-[#F1E24] rounded-full group-hover:scale-110 transition-transform shadow-lg"></div>
+              <div className="absolute -left-[10px] sm:-left-3 w-4 h-4 sm:w-6 sm:h-6 bg-[#FFD700] rounded-full group-hover:scale-110 transition-transform shadow-lg"></div>
 
-              {/* Degree & Course */}
-              <h3 className="text-[1.8vw] font-semibold text-white transition-colors group-hover:text-[#F1E24]">
+              {/* Degree / Course */}
+              <h3 className="text-[5vw] sm:text-[2.5vw] md:text-[1.8vw] font-semibold text-white transition-colors group-hover:text-[#FFD700]">
                 {edu.degree || edu.course}
               </h3>
 
               {/* College Name */}
-              <p className="text-[1.3vw] text-gray-400 italic">{edu.college}</p>
+              <p className="text-[4vw] sm:text-[2vw] md:text-[1.3vw] text-gray-400 italic">
+                {edu.college}
+              </p>
 
               {/* Year */}
-              <span className="text-[1.2vw] text-[#F1E24] font-bold block mt-1">
+              <span className="text-[3.8vw] sm:text-[1.8vw] md:text-[1.2vw] text-[#FFD700] font-bold block mt-1">
                 {edu.year}
               </span>
 
@@ -230,7 +234,7 @@ const Education = () => {
                 initial={{ opacity: 0 }}
                 whileInView={{ opacity: 1 }}
                 transition={{ duration: 0.5, delay: 0.2 }}
-                className="mt-2 text-gray-300 text-[1.1vw] leading-relaxed transition-all group-hover:text-white"
+                className="mt-2 text-[3.5vw] sm:text-[1.8vw] md:text-[1.1vw] text-gray-300 leading-relaxed transition-all group-hover:text-white"
               >
                 {edu.description}
               </motion.p>
@@ -243,5 +247,3 @@ const Education = () => {
 };
 
 export default Education;
-
-
