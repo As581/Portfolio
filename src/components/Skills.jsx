@@ -225,8 +225,8 @@ const Skills = () => {
         >
           <a
             href="#projects"
-            className="inline-block bg-[#F1E24] text-black px-8 py-4 font-bold text-sm sm:text-base md:text-[1.2vw] rounded-full 
-            transition duration-300 hover:bg-yellow-400 hover:shadow-lg hover:scale-105"
+            className="inline-block bg-[#F1E24] text-white px-8 py-4 font-bold text-sm sm:text-base md:text-[1.2vw] rounded-full 
+            transition duration-300 hover:bg-yellow-400 hover:shadow-lg hover:scale-105 hover:text-black"
           >
             Check Out My Work!
           </a>
