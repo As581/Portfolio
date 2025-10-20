@@ -13,11 +13,11 @@ const Bharat = () => {
   }, []);
 
   return (
-    <div className="relative min-h-screen flex flex-col justify-center items-center text-white text-center bg-gradient-to-b from-[#1a1a1a] via-[#121212] to-[#181818] overflow-hidden">
+    <div className="relative min-h-screen flex flex-col justify-center items-center text-white text-center bg-gradient-to-b from-[#1a1a1a] via-[#121212] to-[#181818] overflow-hidden px-4 sm:px-8">
       
       {/* ✨ Subtle Moving Glow */}
       <motion.div
-        className="absolute w-[600px] h-[600px] rounded-full bg-[#FFD700] opacity-5 blur-[200px]"
+        className="absolute w-[400px] sm:w-[600px] h-[400px] sm:h-[600px] rounded-full bg-[#FFD700] opacity-10 blur-[150px] sm:blur-[200px]"
         style={{
           transform: `translate(${mousePos.x * 0.02}px, ${mousePos.y * 0.02}px)`,
         }}
@@ -25,7 +25,7 @@ const Bharat = () => {
 
       {/* 🚀 Title */}
       <motion.h1
-        className="text-6xl lg:text-8xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-[#FFD700] to-[#ff9100] drop-shadow-[0_0_25px_rgba(255,215,0,0.4)]"
+        className="text-4xl sm:text-6xl lg:text-8xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-[#FFD700] to-[#ff9100] drop-shadow-[0_0_25px_rgba(255,215,0,0.4)]"
         initial={{ opacity: 0, y: 30 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 1.2 }}
@@ -35,21 +35,21 @@ const Bharat = () => {
 
       {/* 📜 Sanskrit Quote */}
       <motion.p
-        className="mt-6 text-xl lg:text-2xl text-gray-300 italic font-medium leading-relaxed"
+        className="mt-6 text-base sm:text-lg lg:text-2xl text-gray-300 italic font-medium leading-relaxed max-w-2xl"
         initial={{ opacity: 0, y: 30 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 1.5 }}
       >
         "संस्कृतेन सह भारतस्य नवयुगम्।"
         <br />
-        <span className="text-[#FFD700] font-semibold">
+        <span className="text-[#FFD700] font-semibold block mt-1">
           (Empowering Bharat through Code, Culture & Creativity)
         </span>
       </motion.p>
 
       {/* 🌸 Description */}
       <motion.p
-        className="mt-6 text-lg lg:text-xl text-gray-400 max-w-3xl px-6"
+        className="mt-6 text-sm sm:text-base lg:text-lg text-gray-400 max-w-xl sm:max-w-2xl leading-relaxed px-2 sm:px-4"
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ delay: 1, duration: 1 }}
@@ -60,22 +60,22 @@ const Bharat = () => {
 
       {/* 🔗 Buttons */}
       <motion.div
-        className="mt-10 flex flex-wrap justify-center gap-6"
+        className="mt-10 flex flex-col sm:flex-row justify-center items-center gap-4 sm:gap-6"
         initial={{ opacity: 0, y: 30 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 1.5 }}
       >
-        <button className="px-10 py-4 bg-[#FFD700] text-black font-bold rounded-lg shadow-lg hover:bg-[#e0c000] hover:scale-105 transition-all duration-300">
+        <button className="px-8 sm:px-10 py-3 sm:py-4 bg-[#FFD700] text-black font-bold rounded-lg shadow-lg hover:bg-[#e0c000] hover:scale-105 transition-all duration-300 text-sm sm:text-base">
           Join the Revolution 🚀
         </button>
-        <button className="px-10 py-4 border-2 border-[#FFD700] text-[#FFD700] font-bold rounded-lg hover:bg-[#FFD700] hover:text-black transition-all duration-300">
+        <button className="px-8 sm:px-10 py-3 sm:py-4 border-2 border-[#FFD700] text-[#FFD700] font-bold rounded-lg hover:bg-[#FFD700] hover:text-black transition-all duration-300 text-sm sm:text-base">
           Learn More 🌏
         </button>
       </motion.div>
 
       {/* 🌅 Footer Sanskrit */}
       <motion.div
-        className="absolute bottom-10 text-gray-400 text-sm italic"
+        className="absolute bottom-6 sm:bottom-10 text-gray-400 text-xs sm:text-sm italic px-3 text-center"
         initial={{ opacity: 0 }}
         animate={{ opacity: 0.7 }}
         transition={{ delay: 1.5, duration: 1 }}
