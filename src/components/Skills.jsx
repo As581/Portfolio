@@ -130,7 +130,7 @@ const Skills = () => {
 
 export default Skills;*/
 
-import { motion } from "framer-motion";
+        import { motion } from "framer-motion";
 
 const skills = [
   { name: "HTML", img: "https://cdn-icons-png.flaticon.com/128/888/888859.png", level: "Advanced" },
@@ -150,21 +150,21 @@ const skills = [
   { name: "Adobe XD", img: "/public/Xd.png", level: "Proficient" },
   { name: "Photoshop", img: "/public/Photo.png", level: "Proficient" },
   { name: "Figma", img: "/public/Figma.png", level: "Expert" },
-    { name: "Redux", img: "Redux.png", level: "Intermediate" },
-     { name: "GitHub", img: "Git.png", level: "Intermediate" }
+  { name: "Redux", img: "Redux.png", level: "Intermediate" },
+  { name: "GitHub", img: "Git.png", level: "Intermediate" },
 ];
 
 const Skills = () => {
   return (
-    <section className="bg-gradient-to-b  from-[#121212] to-[#1e1e1e] bg-gradient-to-t  from-[#121212] to-[#1e1e1e]  text-[#E0E0E0] py-20">
-      <div className="max-w-6xl mx-auto px-6 text-center">
-        
-        {/* Animated Heading */}
+    <section className="bg-gradient-to-b from-[#121212] to-[#1e1e1e] text-[#E0E0E0] py-16 px-4 sm:px-8">
+      <div className="max-w-6xl mx-auto text-center">
+
+        {/* Heading */}
         <motion.h2
-          className="text-[2.5vw] font-extrabold text-[#F1E24] tracking-wide"
+          className="text-[8vw] sm:text-[5vw] md:text-[2.5vw] font-extrabold text-[#FFD700] tracking-wide"
           initial={{ y: -20, opacity: 0 }}
           whileInView={{ y: 0, opacity: 1 }}
-          transition={{ duration: 0.8, ease: "easeOut" }}
+          transition={{ duration: 0.8, ease: 'easeOut' }}
           viewport={{ once: true }}
         >
           My Skills & Expertise
@@ -172,33 +172,32 @@ const Skills = () => {
 
         {/* Subheading */}
         <motion.p
-          className="mt-4 text-[1.2vw] text-gray-400"
+          className="mt-3 text-[4vw] sm:text-[2.5vw] md:text-[1.2vw] text-gray-400 leading-relaxed max-w-3xl mx-auto"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.2 }}
           viewport={{ once: true }}
         >
-          Over the years, I have mastered various **frontend & backend technologies**  
-          to build modern, scalable, and **high-performance applications**.
+          Over the years, I’ve mastered various <span className="text-[#FFD700]">frontend</span> & <span className="text-[#FFD700]">backend technologies</span> 
+          to build modern, scalable, and <span className="text-[#FFD700]">high-performance applications</span>.
         </motion.p>
 
-        {/* Underline Effect */}
+        {/* Underline */}
         <motion.div
-          className="w-[5vw] h-[5px] bg-[#F1E24] mx-auto mt-3"
+          className="w-[10vw] sm:w-[6vw] h-[4px] bg-[#FFD700] mx-auto mt-4"
           initial={{ scaleX: 0 }}
           whileInView={{ scaleX: 1 }}
-          transition={{ duration: 0.6, ease: "easeOut" }}
+          transition={{ duration: 0.6, ease: 'easeOut' }}
           viewport={{ once: true }}
         ></motion.div>
 
         {/* Skills Grid */}
-        <div className="mt-10 grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-8">
+        <div className="mt-12 grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-6 sm:gap-8">
           {skills.map((skill, index) => (
             <motion.div
               key={index}
-              className="flex flex-col items-center p-5 bg-[#1E1E1E] rounded-lg shadow-md 
-              transition-all duration-300 border border-[#F1E24] hover:shadow-lg hover:-translate-y-2"
-              whileHover={{ scale: 1.1 }}
+              className="flex flex-col items-center justify-center bg-[#1E1E1E] p-4 sm:p-6 rounded-lg border border-[#FFD700] shadow-md hover:-translate-y-2 transition-all duration-300 hover:shadow-[#FFD700]/30"
+              whileHover={{ scale: 1.05 }}
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: index * 0.1 }}
@@ -207,15 +206,15 @@ const Skills = () => {
               <img
                 src={skill.img}
                 alt={skill.name}
-                className="w-16 h-16 rounded-full bg-white p-2 shadow-md"
+                className="w-[18vw] h-[18vw] sm:w-[10vw] sm:h-[10vw] md:w-[6vw] md:h-[6vw] rounded-full bg-white p-2 shadow-md object-contain"
               />
-              <p className="mt-3 text-lg font-semibold">{skill.name}</p>
-              <p className="text-sm text-gray-400">{skill.level}</p>
+              <p className="mt-3 text-[4vw] sm:text-[2vw] md:text-[1vw] font-semibold text-white">{skill.name}</p>
+              <p className="text-[3.5vw] sm:text-[1.6vw] md:text-[0.9vw] text-gray-400">{skill.level}</p>
             </motion.div>
           ))}
         </div>
 
-        {/* Call to Action */}
+        {/* Button */}
         <motion.div
           className="mt-10"
           initial={{ opacity: 0, y: 20 }}
@@ -225,8 +224,7 @@ const Skills = () => {
         >
           <a
             href="#projects"
-            className="inline-block bg-[#F1E24] text-black px-8 py-4 font-bold text-[1.2vw] rounded-full 
-            transition duration-300 hover:bg-yellow-400 hover:shadow-lg hover:scale-105"
+            className="inline-block bg-[#FFD700] text-black font-bold text-[4vw] sm:text-[2vw] md:text-[1vw] px-6 sm:px-10 py-3 sm:py-4 rounded-full transition duration-300 hover:bg-yellow-400 hover:scale-105"
           >
             Check Out My Work!
           </a>
@@ -237,4 +235,3 @@ const Skills = () => {
 };
 
 export default Skills;
-
