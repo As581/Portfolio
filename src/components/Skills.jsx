@@ -130,7 +130,7 @@ const Skills = () => {
 
 export default Skills;*/
 
-  import { motion } from "framer-motion";
+import { motion } from "framer-motion";
 
 const skills = [
   { name: "HTML", img: "https://cdn-icons-png.flaticon.com/128/888/888859.png", level: "Advanced" },
@@ -156,12 +156,12 @@ const skills = [
 
 const Skills = () => {
   return (
-    <section className="bg-gradient-to-b from-[#121212] to-[#1e1e1e] text-[#E0E0E0] py-20">
+    <section className="bg-gradient-to-b from-[#121212] via-[#1a1a1a] to-[#1e1e1e] text-[#E0E0E0] py-20">
       <div className="max-w-6xl mx-auto px-6 text-center">
         
         {/* Animated Heading */}
         <motion.h2
-          className="text-[8vw] sm:text-[5vw] md:text-[2.5vw] font-extrabold text-[#F1E24] tracking-wide"
+          className="text-[6vw] sm:text-[4vw] md:text-[2.5vw] font-extrabold text-[#F1E24] tracking-wide"
           initial={{ y: -20, opacity: 0 }}
           whileInView={{ y: 0, opacity: 1 }}
           transition={{ duration: 0.8, ease: "easeOut" }}
@@ -172,19 +172,19 @@ const Skills = () => {
 
         {/* Subheading */}
         <motion.p
-          className="mt-4 text-[4vw] sm:text-[2vw] md:text-[1.2vw] text-gray-400 leading-relaxed max-w-3xl mx-auto"
+          className="mt-4 text-sm sm:text-base md:text-[1.2vw] text-gray-400 max-w-3xl mx-auto"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.2 }}
           viewport={{ once: true }}
         >
-          Over the years, I have mastered various <span className="text-[#F1E24] font-semibold">frontend & backend technologies</span>  
-          to build modern, scalable, and <span className="text-[#F1E24] font-semibold">high-performance applications</span>.
+          Over the years, I have mastered various frontend & backend technologies  
+          to build modern, scalable, and high-performance applications.
         </motion.p>
 
-        {/* Underline Effect */}
+        {/* Underline */}
         <motion.div
-          className="w-[5vw] h-[5px] bg-[#F1E24] mx-auto mt-3"
+          className="w-[50px] sm:w-[5vw] h-[5px] bg-[#F1E24] mx-auto mt-4 rounded-full"
           initial={{ scaleX: 0 }}
           whileInView={{ scaleX: 1 }}
           transition={{ duration: 0.6, ease: "easeOut" }}
@@ -192,32 +192,32 @@ const Skills = () => {
         ></motion.div>
 
         {/* Skills Grid */}
-        <div className="mt-10 grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-8">
+        <div className="mt-12 grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-8">
           {skills.map((skill, index) => (
             <motion.div
               key={index}
-              className="flex flex-col items-center p-5 bg-[#1E1E1E] rounded-lg shadow-md 
-              transition-all duration-300 border border-[#F1E24] hover:shadow-lg hover:-translate-y-2"
-              whileHover={{ scale: 1.1 }}
+              className="flex flex-col items-center p-5 bg-[#1b1b1b] rounded-lg shadow-md 
+              border border-[#F1E24]/50 hover:border-[#F1E24] transition-all duration-300 hover:shadow-[#F1E24]/40 hover:shadow-lg"
+              whileHover={{ scale: 1.08 }}
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: index * 0.1 }}
+              transition={{ duration: 0.5, delay: index * 0.05 }}
               viewport={{ once: true }}
             >
               <img
                 src={skill.img}
                 alt={skill.name}
-                className="w-16 h-16 rounded-full bg-white p-2 shadow-md"
+                className="w-16 h-16 sm:w-20 sm:h-20 object-contain bg-white rounded-full p-2"
               />
-              <p className="mt-3 text-lg sm:text-[1.3vw] md:text-[1vw] font-semibold">{skill.name}</p>
-              <p className="text-sm sm:text-[1vw] md:text-[0.9vw] text-gray-400">{skill.level}</p>
+              <p className="mt-3 text-base sm:text-lg font-semibold">{skill.name}</p>
+              <p className="text-xs sm:text-sm text-gray-400">{skill.level}</p>
             </motion.div>
           ))}
         </div>
 
         {/* Call to Action */}
         <motion.div
-          className="mt-10"
+          className="mt-12"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.5 }}
@@ -225,7 +225,7 @@ const Skills = () => {
         >
           <a
             href="#projects"
-            className="inline-block bg-[#F1E24] text-black px-8 py-4 font-bold text-[4vw] sm:text-[2vw] md:text-[1.2vw] rounded-full 
+            className="inline-block bg-[#F1E24] text-black px-8 py-4 font-bold text-sm sm:text-base md:text-[1.2vw] rounded-full 
             transition duration-300 hover:bg-yellow-400 hover:shadow-lg hover:scale-105"
           >
             Check Out My Work!
