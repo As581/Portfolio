@@ -146,14 +146,15 @@ const Education = () => {
 
 export default Education;*/
 
-import { motion } from "framer-motion";
+    import { motion } from "framer-motion";
 
 const educationData = [
   {
     year: "2021-2024",
     degree: "Bachelor Of Computer Application",
     college: "LN College Of Management Of Technology, Mumbai",
-    description: "Studied Full Stack Development, Data Structures, and Machine Learning.",
+    description:
+      "Studied Full Stack Development, Data Structures, and Machine Learning.",
   },
   {
     year: "2018-2020",
@@ -165,13 +166,15 @@ const educationData = [
     year: "2013-2018",
     degree: "Secondary (10th)",
     college: "Pal Rajendra Hindi High School, Mumbai",
-    description: "Achieved high grades and developed a strong foundation in Science & History.",
+    description:
+      "Achieved high grades and developed a strong foundation in Science & History.",
   },
   {
     year: "2024-2025",
     course: "6 Month Course",
     college: "Shankar Multimedia, Mumbai",
-    description: "Create scalable and fantastic applications and websites.",
+    description:
+      "Create scalable and fantastic applications and websites.",
   },
 ];
 
@@ -187,7 +190,6 @@ const Education = () => {
             transition={{ duration: 0.6 }}
             className="flex items-center gap-3 sm:gap-4"
           >
-            <div className="w-3 h-3 sm:w-4 sm:h-4 bg-[#FFD700] rounded-full"></div>
             <h2 className="text-[6vw] sm:text-[4vw] md:text-[2.5vw] font-bold text-[#FFD700] tracking-wide">
               Education
             </h2>
@@ -211,9 +213,6 @@ const Education = () => {
               viewport={{ once: true }}
               className="mb-10 relative group"
             >
-              {/* Timeline Dot */}
-              <div className="absolute -left-[10px] sm:-left-3 w-4 h-4 sm:w-6 sm:h-6 bg-[#FFD700] rounded-full group-hover:scale-110 transition-transform shadow-lg"></div>
-
               {/* Degree / Course */}
               <h3 className="text-[5vw] sm:text-[2.5vw] md:text-[1.8vw] font-semibold text-white transition-colors group-hover:text-[#FFD700]">
                 {edu.degree || edu.course}
