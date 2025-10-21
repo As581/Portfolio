@@ -5,40 +5,56 @@ import { useLenis } from "@studio-freight/react-lenis";
 
 const Navbar3 = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const [hasScrolled, setHasScrolled] = useState(false);
   const [isHidden, setIsHidden] = useState(false);
   const lenis = useLenis();
   const lastScrollY = useRef(0);
 
-  // 🔹 Scroll detection for hide/show effect
+  // 🔹 Scroll Detection for BG + Hide Logic
   useEffect(() => {
     const handleScroll = () => {
       const currentY = window.scrollY;
+
+      // Background logic
+      setHasScrolled(currentY > 20);
+
+      // Hide/show logic
       if (currentY < lastScrollY.current) setIsHidden(true);
       else setIsHidden(false);
+
       lastScrollY.current = currentY;
     };
+
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  // 🔹 Scroll to section with Lenis smooth scroll
+  // 🔹 Smooth Scroll Function
   const scrollToSection = (id) => {
     const section = document.getElementById(id);
     if (section) {
       lenis?.scrollTo(section);
-      setIsOpen(false); // close menu after click
+      setIsOpen(false);
     }
   };
 
   return (
     <motion.nav
-      className={`fixed top-0 left-0 w-full px-6 lg:px-[4vw] py-4 flex justify-between items-center z-50 transition-transform duration-500 ${
+      className={`fixed top-0 left-0 w-full px-6 lg:px-[4vw] py-4 flex justify-between items-center z-50 transition-all duration-500 ${
         isHidden ? "-translate-y-full" : "translate-y-0"
-      } bg-[#121212]/80 backdrop-blur-md border-b border-[#1f1f1f]`}
+      } ${
+        hasScrolled
+          ? "bg-[#121212]/85 backdrop-blur-md border-b border-[#1f1f1f] shadow-md"
+          : "bg-transparent border-none"
+      }`}
     >
       {/* ✅ Logo */}
       <div className="flex items-center">
-        <img src="/Logo.png" alt="Logo" className="w-14 h-auto cursor-pointer" />
+        <img
+          src="/Logo.png"
+          alt="Logo"
+          className="w-14 h-auto cursor-pointer transition-transform duration-300 hover:scale-105"
+        />
       </div>
 
       {/* ✅ Desktop Menu */}
@@ -85,7 +101,7 @@ const Navbar3 = () => {
             transition={{ duration: 0.4, ease: "easeInOut" }}
             className="fixed top-0 right-0 w-full h-screen bg-[#121212]/95 backdrop-blur-xl flex flex-col items-center justify-center space-y-10 text-[#E0E0E0] text-2xl font-semibold shadow-2xl"
           >
-            {/* Close Button inside Menu */}
+            {/* Close Button */}
             <button
               onClick={() => setIsOpen(false)}
               className="absolute top-5 right-6 text-3xl text-[#FFD700]"
