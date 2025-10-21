@@ -1,10 +1,8 @@
 import { motion } from "framer-motion";
-import { useEffect, useState } from "react";
 import { TypeAnimation } from "react-type-animation";
-//import profilePic from "../assets/profile.jpg"; 
+import { useEffect, useState } from "react";
 
 const Hero2 = () => {
-  // Dynamic blur positions
   const [offsetY, setOffsetY] = useState(0);
   const handleScroll = () => setOffsetY(window.scrollY);
 
@@ -14,44 +12,31 @@ const Hero2 = () => {
   }, []);
 
   return (
-    <div className="w-screen h-screen bg-gradient-to-b from-[#121212] to-[#1E1E1E] text-[#E0E0E0] px-[4vw] flex flex-col justify-center items-center text-center relative overflow-hidden bg-cover bg-center">
-      
-      {/* Floating Blur Effects with Parallax */}
+    <div
+      className="w-screen h-screen bg-[#121212] text-[#E0E0E0] px-[4vw] flex flex-col justify-center items-center text-center relative overflow-hidden bg-cover bg-center"
+    >
+      {/* ✨ Floating Golden Glows */}
       <motion.div
-        className="absolute top-10 left-20 w-40 h-40 bg-[#F1E24] opacity-20 blur-3xl rounded-full"
+        className="absolute top-10 left-20 w-40 h-40 bg-[#d4af37] opacity-20 blur-3xl rounded-full"
         style={{ transform: `translateY(${offsetY * 0.5}px)` }}
       />
       <motion.div
-        className="absolute bottom-10 right-20 w-32 h-32 bg-[#F1E24] opacity-15 blur-2xl rounded-full"
+        className="absolute bottom-10 right-20 w-32 h-32 bg-[#d4af37] opacity-10 blur-2xl rounded-full"
         style={{ transform: `translateY(-${offsetY * 0.3}px)` }}
       />
 
-      {/* Profile Image */}
-      <motion.div
-        className="relative w-48 h-48 md:w-56 md:h-56 rounded-full overflow-hidden shadow-xl border-[4px] border-[#F1E24]"
-        initial={{ opacity: 0, scale: 0.8 }}
-        animate={{ opacity: 1, scale: 1 }}
-        transition={{ duration: 1 }}
-      >
-        <img 
-          src="/public/Bg.png"
-          alt="Profile"
-          className="w-full h-full object-cover filter brightness-50 contrast-125"
-        />
-      </motion.div>
-
-      {/* Animated Hero Title with Typewriter Effect */}
+      {/* 🏛️ Elegant Name + Tagline */}
       <motion.h1
-        className="text-[4.5vw] font-extrabold tracking-wide text-white mt-6"
-        initial={{ opacity: 0, y: -50 }}
+        className="text-[4vw] font-extrabold tracking-wide text-white leading-tight"
+        initial={{ opacity: 0, y: -40 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 1 }}
       >
         <TypeAnimation
           sequence={[
-            "Beyond the Code: Creating Impact", 2000,
-            "Innovate. Build. Inspire.", 2000,
-            "Crafting Digital Experiences.", 2000
+            "Designing Spaces That Inspire ✨", 2000,
+            "Where Elegance Meets Comfort 🏛️", 2000,
+            "Crafting Interiors with Soul 💫", 2000
           ]}
           wrapper="span"
           speed={50}
@@ -59,44 +44,49 @@ const Hero2 = () => {
         />
       </motion.h1>
 
-      {/* Sub-title with Glow Effect */}
       <motion.h2
-        className="text-[2.5vw] mt-2 text-[#F1E24] drop-shadow-lg"
-        initial={{ opacity: 0, y: 20 }}
+        className="text-[2vw] mt-4 text-[#d4af37] font-semibold drop-shadow-lg"
+        initial={{ opacity: 0, y: 30 }}
         animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 1, delay: 0.5 }}
+        transition={{ duration: 1, delay: 0.4 }}
       >
-        Full Stack Developer | UI/UX Enthusiast
+        Hi, I’m <span className="text-white">Aashish Vishwakarma</span> — Interior Designer
       </motion.h2>
 
-      {/* Description */}
+      {/* 🪶 Description */}
       <motion.p
-        className="mt-6 w-[50%] text-[1.3vw] text-gray-400 leading-relaxed"
+        className="mt-6 w-[55%] text-[1.2vw] text-gray-400 leading-relaxed"
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
-        transition={{ duration: 1, delay: 1 }}
+        transition={{ duration: 1, delay: 0.8 }}
       >
-        Passionate about building high-performance web applications and solving
-        real-world problems with clean, efficient code.
+        I create timeless interiors that blend art, architecture, and emotion.  
+        From modern apartments to cultural spaces — my designs reflect simplicity, depth, and identity.
       </motion.p>
 
-      {/* Call-to-Action Button */}
+      {/* 🎯 Buttons */}
       <motion.div
-        className="mt-[3.7vw]"
+        className="mt-[3vw] flex flex-wrap justify-center gap-6"
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 1, delay: 1.5 }}
+        transition={{ duration: 1, delay: 1.2 }}
       >
         <motion.a
-          href="/public/myClass2 (1).pdf"
-          download
-          className="relative inline-flex items-center justify-center px-8 py-3 font-semibold text-black bg-[#F1E24] rounded-full shadow-lg overflow-hidden group transition-all duration-300 hover:bg-[#FFD700]"
+          href="#projects"
+          className="bg-[#d4af37] text-black px-8 py-3 rounded-full font-semibold text-lg shadow-lg transition-all duration-300 hover:bg-[#b8922d] hover:scale-105"
           whileHover={{ scale: 1.05 }}
           whileTap={{ scale: 0.95 }}
         >
-          Download CV
-          {/* Shine Effect */}
-          <span className="absolute inset-0 bg-white opacity-10 group-hover:opacity-20 transition-opacity duration-500 blur-md"></span>
+          View My Creations 🪄
+        </motion.a>
+
+        <motion.a
+          href="#contact"
+          className="border-2 border-[#d4af37] text-[#d4af37] px-8 py-3 rounded-full font-semibold text-lg transition-all duration-300 hover:bg-[#d4af37] hover:text-black"
+          whileHover={{ scale: 1.05 }}
+          whileTap={{ scale: 0.95 }}
+        >
+          Let’s Collaborate 🤝
         </motion.a>
       </motion.div>
     </div>
