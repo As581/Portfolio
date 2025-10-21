@@ -36,11 +36,12 @@ const Hero = () => {
 export default Hero;
 */}
   
-import { motion } from "framer-motion";
+  import { motion } from "framer-motion";
 import { useEffect, useState } from "react";
 import { TypeAnimation } from "react-type-animation";
 
 const Hero = () => {
+  // Dynamic blur positions
   const [offsetY, setOffsetY] = useState(0);
   const handleScroll = () => setOffsetY(window.scrollY);
 
@@ -50,23 +51,22 @@ const Hero = () => {
   }, []);
 
   return (
-    <div
-      className="w-screen h-screen bg-[#121212] text-[#E0E0E0] 
-      flex flex-col justify-center items-center text-center relative overflow-hidden px-[4vw]"
-    >
-      {/* Floating Blur Effects */}
+   <div
+  className="w-screen h-screen bg-[#121212]  text-[#E0E0E0] px-[4vw] flex flex-col justify-center items-center text-center relative overflow-hidden bg-cover bg-center">
+      
+      {/* Floating Blur Effects with Parallax */}
       <motion.div
-        className="absolute top-10 left-20 w-40 h-40 bg-[#F1E24] opacity-20 blur-3xl rounded-full sm:w-24 sm:h-24 sm:top-16 sm:left-10"
+        className="absolute top-10 left-20 w-40 h-40 bg-[#F1E24] opacity-20 blur-3xl rounded-full"
         style={{ transform: `translateY(${offsetY * 0.5}px)` }}
       />
       <motion.div
-        className="absolute bottom-10 right-20 w-32 h-32 bg-[#F1E24] opacity-15 blur-2xl rounded-full sm:w-20 sm:h-20 sm:right-10 sm:bottom-16"
+        className="absolute bottom-10 right-20 w-32 h-32 bg-[#F1E24] opacity-15 blur-2xl rounded-full"
         style={{ transform: `translateY(-${offsetY * 0.3}px)` }}
       />
 
-      {/* Animated Hero Title */}
+      {/* Animated Hero Title with Typewriter Effect */}
       <motion.h1
-        className="text-[4.5vw] sm:text-[7vw] font-extrabold tracking-wide text-white leading-snug"
+        className="text-[4.5vw] font-extrabold tracking-wide text-white"
         initial={{ opacity: 0, y: -50 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 1 }}
@@ -75,7 +75,7 @@ const Hero = () => {
           sequence={[
             "Beyond the Code: Creating Impact", 2000,
             "Innovate. Build. Inspire.", 2000,
-            "Crafting Digital Experiences.", 2000,
+            "Crafting Digital Experiences.", 2000
           ]}
           wrapper="span"
           speed={50}
@@ -83,9 +83,9 @@ const Hero = () => {
         />
       </motion.h1>
 
-      {/* Subtitle */}
+      {/* Sub-title with Glow Effect */}
       <motion.h2
-        className="text-[2.5vw] sm:text-[5vw] mt-3 text-[#F1E24] drop-shadow-lg font-semibold"
+        className="text-[2.5vw] mt-2 text-[#F1E24] drop-shadow-lg"
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 1, delay: 0.5 }}
@@ -95,7 +95,7 @@ const Hero = () => {
 
       {/* Description */}
       <motion.p
-        className="mt-6 w-[50%] sm:w-[90%] text-[1.3vw] sm:text-[4vw] text-gray-400 leading-relaxed sm:leading-snug"
+        className="mt-6 w-[50%] text-[1.3vw] text-gray-400 leading-relaxed"
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 1, delay: 1 }}
@@ -106,25 +106,41 @@ const Hero = () => {
 
       {/* Call-to-Action Button */}
       <motion.div
-        className="mt-[3.7vw] sm:mt-10"
+        className="mt-[3.7vw]"
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 1, delay: 1.5 }}
       >
-        <motion.a
+      {/*<motion.a
           href="/public/myClass2 (1).pdf"
           download
-          className="relative inline-block px-10 py-3 sm:px-8 sm:py-3 text-black font-semibold 
-          text-[1.2vw] sm:text-[4vw] rounded-full shadow-lg transition-all duration-300 ease-in-out 
-          overflow-hidden bg-[#121212] hover:bg-white hover:text-black text-white border border-white"
-          whileHover={{ scale: 1.08 }}
+          className="bg-gradient-to-r from-[#F1E24] to-yellow-500 text-black px-8 py-3 rounded-full font-semibold text-lg shadow-lg relative group overflow-hidden text-white"
+          whileHover={{ scale: 1.05 }}
           whileTap={{ scale: 0.95 }}
         >
           Download CV
+
+          <span className="absolute inset-0 bg-white opacity-10 group-hover:opacity-20 transition-opacity duration-500 blur-md"></span>
         </motion.a>
+        */}<motion.a
+  href="/public/myClass2 (1).pdf"
+  download
+  className="relative inline-block px-8 py-3 text-black font-semibold text-lg rounded-full shadow-lg transition-all duration-300 ease-in-out overflow-hidden bg-[#121212] hover:bg-white hover:text-black text-white"
+  whileHover={{ scale: 1.08 }}
+  whileTap={{ scale: 0.95 }}
+>
+  Download CV
+
+  {/* Subtle Border Glow Effect */}
+  <span className="absolute inset-0 w-full h-full rounded-full border-[3px] border-transparent hover:border-white transition-all duration-500"></span>
+</motion.a>
+
+
+
       </motion.div>
     </div>
   );
 };
+
 
 export default Hero;
