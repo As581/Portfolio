@@ -37,7 +37,7 @@ const Navbar2 = () => {
 
   return (
     <motion.nav
-      className={`w-full px-6 lg:px-[4vw] py-4 pb-[5px] mb-[5px] flex justify-between items-center fixed top-0 z-50 shadow-lg bg-[#121212] transition-transform duration-500 ${
+      className={`w-full px-6 lg:px-[4vw] py-4 pb-[5px] mb-[5px] flex justify-between items-center fixed top-0 z-50 shadow-lg transition-transform duration-500 ${
         isHidden ? "-translate-y-full" : "translate-y-0"
       }`}
       initial={{ y: 0, opacity: 1 }}
