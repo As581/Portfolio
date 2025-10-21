@@ -1,6 +1,6 @@
 import React, { useState} from "react";
-import Hero2 from "./components/Hero2.jsx";
-import About2 from "./components/About2.jsx";
+import Hero from "./components/Hero.jsx";
+import About from "./components/About.jsx";
 import Education from "./components/Education.jsx";
 import Skills from "./components/Skills.jsx";
 import Projects from "./components/Projects.jsx";
@@ -25,10 +25,10 @@ function App() {
         <>
           <Navbar2 />
           <div id="hero">
-            <Hero2 />
+            <Hero />
           </div>
           <div id="about">
-            <About2 />
+            <About />
           </div>
           <div id="education">
             <Education />
