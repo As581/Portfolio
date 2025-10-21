@@ -1,5 +1,5 @@
 import React, { useState} from "react";
-import Hero from "./components/Hero.jsx";
+import Hero3 from "./components/Hero3.jsx";
 import About from "./components/About.jsx";
 import Education from "./components/Education.jsx";
 import Skills from "./components/Skills.jsx";
@@ -25,7 +25,7 @@ function App() {
         <>
           <Navbar2 />
           <div id="hero">
-            <Hero />
+            <Hero3 />
           </div>
           <div id="about">
             <About />
