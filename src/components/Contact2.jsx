@@ -68,7 +68,7 @@ const Contact2 = () => {
 
           <button
             type="submit"
-            className={`w-full text-black font-semibold py-3 rounded-md transition ${
+            className={`w-full text-white font-semibold py-3 rounded-md transition ${
               loading ? "opacity-50 cursor-not-allowed" : "hover:bg-[#d4ac0d]"
             }`}
             disabled={loading}
