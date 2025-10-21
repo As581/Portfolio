@@ -26,7 +26,7 @@ const Navbar3 = () => {
     const section = document.getElementById(id);
     if (section) {
       lenis?.scrollTo(section);
-      setIsOpen(false);
+      setIsOpen(false); // close menu after click
     }
   };
 
@@ -36,7 +36,7 @@ const Navbar3 = () => {
         isHidden ? "-translate-y-full" : "translate-y-0"
       } bg-[#121212]/80 backdrop-blur-md border-b border-[#1f1f1f]`}
     >
-      {/* ✅ Logo only */}
+      {/* ✅ Logo */}
       <div className="flex items-center">
         <img src="/Logo.png" alt="Logo" className="w-14 h-auto cursor-pointer" />
       </div>
@@ -68,7 +68,7 @@ const Navbar3 = () => {
 
       {/* ✅ Mobile Menu Toggle */}
       <button
-        onClick={() => setIsOpen(!isOpen)}
+        onClick={() => setIsOpen((prev) => !prev)}
         className="lg:hidden text-[#FFD700] text-3xl"
       >
         {isOpen ? <FaTimes /> : <FaBars />}
@@ -85,6 +85,15 @@ const Navbar3 = () => {
             transition={{ duration: 0.4, ease: "easeInOut" }}
             className="fixed top-0 right-0 w-full h-screen bg-[#121212]/95 backdrop-blur-xl flex flex-col items-center justify-center space-y-10 text-[#E0E0E0] text-2xl font-semibold shadow-2xl"
           >
+            {/* Close Button inside Menu */}
+            <button
+              onClick={() => setIsOpen(false)}
+              className="absolute top-5 right-6 text-3xl text-[#FFD700]"
+            >
+              <FaTimes />
+            </button>
+
+            {/* Menu Links */}
             {["about", "skills", "projects", "education", "contact"].map(
               (item, index) => (
                 <motion.button
@@ -100,9 +109,11 @@ const Navbar3 = () => {
               )
             )}
 
+            {/* CTA Button */}
             <motion.a
               href="#contact"
               whileHover={{ scale: 1.05 }}
+              onClick={() => setIsOpen(false)}
               className="mt-8 bg-gradient-to-r from-[#FFD700] to-[#e0c000] text-black px-10 py-3 rounded-full font-bold text-xl hover:shadow-[0_0_25px_#FFD700]"
             >
               Let’s Talk
