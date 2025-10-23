@@ -3,7 +3,7 @@ import Hero3 from "./components/Hero3.jsx";
 import About from "./components/About.jsx";
 import Education from "./components/Education.jsx";
 import Skills from "./components/Skills.jsx";
-import Projects from "./components/Projects.jsx";
+import Projects2 from "./components/Projects2.jsx";
 import Contact2 from "./components/Contact2.jsx";
 import Working from "./components/MyWorkingProcess.jsx";
 import Loading from "./components/Loading.jsx";
@@ -40,7 +40,7 @@ function App() {
             <Working />
           </div>
           <div id="projects">
-            <Projects />
+            <Projects2 />
           </div>
           <div id="bharat">
               <Bharat />
