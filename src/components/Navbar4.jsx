@@ -6,7 +6,6 @@ const Navbar4 = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
 
-  // Scroll detection for background appearance
   useEffect(() => {
     const handleScroll = () => {
       setScrolled(window.scrollY > 50);
@@ -17,58 +16,60 @@ const Navbar4 = () => {
 
   return (
     <motion.nav
-      className={`fixed top-0 w-full z-50 px-[5vw] py-4 flex justify-between items-center transition-all duration-500 ${
+      className={`fixed top-0 left-0 w-full z-50 flex justify-between items-center px-[6vw] py-4 transition-all duration-700 ${
         scrolled
-          ? "bg-[#1a1a1a]/90 backdrop-blur-md shadow-md border-b border-[#f1e24]/20"
+          ? "bg-[#2B0A0A]/95 backdrop-blur-md border-b border-[#FFD700]/30 shadow-lg"
           : "bg-transparent"
       }`}
-      initial={{ y: -80, opacity: 0 }}
+      initial={{ y: -60, opacity: 0 }}
       animate={{ y: 0, opacity: 1 }}
-      transition={{ duration: 0.8, ease: "easeOut" }}
+      transition={{ duration: 0.7, ease: "easeOut" }}
     >
-      {/* 🇮🇳 Logo + Title */}
+      {/* 🔱 BharatDarshan Logo */}
       <motion.div
         className="flex items-center gap-3 cursor-pointer"
         whileHover={{ scale: 1.05 }}
       >
         <img
-          src="/bharatlogo.png"
+          src="/templelogo.png"
           alt="BharatDarshan Logo"
-          className="w-12 h-12 rounded-full border-2 border-[#FACC15] shadow-md"
+          className="w-12 h-12 rounded-full border-2 border-[#FFD700] shadow-[0_0_10px_#FFD70055]"
         />
-        <h1 className="text-2xl font-extrabold text-[#FACC15] tracking-wider">
-          Bharat<span className="text-white">Darshan</span>
+        <h1 className="text-2xl font-extrabold text-[#FFD700] tracking-wider font-serif">
+          Bharat<span className="text-[#FFF]">Darshan</span>
         </h1>
       </motion.div>
 
-      {/* 💫 Nav Links (Desktop) */}
-      <ul className="hidden md:flex gap-10 text-[#E0E0E0] font-medium tracking-wide">
-        {["Home", "Temples", "Gallery", "About", "Contact"].map((item) => (
+      {/* 🌟 Desktop Links */}
+      <ul className="hidden md:flex gap-10 text-[#FFF] font-medium tracking-wide">
+        {["Home", "Temples", "Culture", "History", "Contact"].map((item) => (
           <motion.li
             key={item}
-            whileHover={{ scale: 1.1, color: "#FACC15" }}
-            transition={{ duration: 0.2 }}
-            className="cursor-pointer hover:text-[#FACC15] transition-colors duration-300"
+            whileHover={{ scale: 1.1 }}
+            className="relative cursor-pointer group"
           >
-            {item}
+            <span className="group-hover:text-[#FFD700] transition duration-300">
+              {item}
+            </span>
+            <span className="absolute bottom-[-4px] left-0 w-0 h-[2px] bg-[#FFD700] group-hover:w-full transition-all duration-300"></span>
           </motion.li>
         ))}
       </ul>
 
-      {/* 🔱 Call to Action Button */}
+      {/* ✨ Explore Button */}
       <motion.a
         href="#explore"
-        whileHover={{ scale: 1.08 }}
+        whileHover={{ scale: 1.05 }}
         whileTap={{ scale: 0.95 }}
-        className="hidden md:inline-block bg-gradient-to-r from-[#FACC15] to-[#d4ac0d] text-black font-semibold px-6 py-2 rounded-full shadow-lg hover:shadow-[#FACC15]/40 transition-all duration-300"
+        className="hidden md:block px-6 py-2 rounded-full bg-gradient-to-r from-[#FFD700] to-[#d6b300] text-[#2B0A0A] font-semibold shadow-[0_0_10px_#FFD70055] hover:shadow-[0_0_20px_#FFD70099] transition-all duration-300"
       >
-        Explore Bharat
+        Explore Temples
       </motion.a>
 
-      {/* 📱 Mobile Menu Icon */}
+      {/* 📱 Mobile Icon */}
       <button
-        className="md:hidden text-[#FACC15] text-3xl"
         onClick={() => setIsOpen(!isOpen)}
+        className="md:hidden text-[#FFD700] text-3xl"
       >
         {isOpen ? <FaTimes /> : <FaBars />}
       </button>
@@ -77,15 +78,15 @@ const Navbar4 = () => {
       <motion.div
         initial={{ x: "100%" }}
         animate={{ x: isOpen ? 0 : "100%" }}
-        transition={{ duration: 0.5, ease: "easeOut" }}
-        className="fixed top-0 right-0 h-full w-[70vw] bg-[#121212] flex flex-col items-center justify-center gap-8 text-xl text-[#E0E0E0] shadow-2xl md:hidden"
+        transition={{ duration: 0.5 }}
+        className="fixed top-0 right-0 h-full w-[70vw] bg-[#2B0A0A] flex flex-col items-center justify-center gap-8 text-[#FFF] text-xl md:hidden border-l border-[#FFD700]/30 shadow-lg"
       >
-        {["Home", "Temples", "Gallery", "About", "Contact"].map((item) => (
+        {["Home", "Temples", "Culture", "History", "Contact"].map((item) => (
           <motion.button
             key={item}
-            whileHover={{ scale: 1.1, color: "#FACC15" }}
             onClick={() => setIsOpen(false)}
-            className="cursor-pointer hover:text-[#FACC15] transition-all duration-300"
+            whileHover={{ scale: 1.1, color: "#FFD700" }}
+            className="cursor-pointer hover:text-[#FFD700] transition-all duration-300"
           >
             {item}
           </motion.button>
@@ -93,10 +94,10 @@ const Navbar4 = () => {
 
         <motion.a
           href="#explore"
-          whileHover={{ scale: 1.1 }}
-          className="bg-[#FACC15] text-black px-6 py-2 rounded-full font-semibold shadow-md hover:shadow-[#FACC15]/40 transition"
+          whileHover={{ scale: 1.08 }}
+          className="bg-[#FFD700] text-[#2B0A0A] px-6 py-2 rounded-full font-semibold shadow-lg hover:shadow-[#FFD700]/40 transition-all"
         >
-          Explore Bharat
+          Explore Temples
         </motion.a>
       </motion.div>
     </motion.nav>
