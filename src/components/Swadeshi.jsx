@@ -1,12 +1,12 @@
 import { motion } from "framer-motion";
-import { FaHandshake, FaLeaf, FaMobileAlt, FaRocket, FaHeart } from "react-icons/fa";
+import { FaHandshake, FaMobileAlt, FaRocket, FaHeart } from "react-icons/fa";
 
 const Swadeshi = () => {
   return (
-    <section className="relative overflow-hidden bg-[#0c0c0c] text-white py-24 px-6 flex flex-col items-center text-center">
-      {/* 🇮🇳 Tricolor Blurred Glow */}
-      <div className="absolute top-[-50px] left-[-50px] w-96 h-96 bg-[#FF9933] blur-[140px] opacity-20 rounded-full"></div>
-      <div className="absolute bottom-[-80px] right-[-80px] w-96 h-96 bg-[#138808] blur-[140px] opacity-20 rounded-full"></div>
+    <section className="relative overflow-hidden bg-[#1e1e1e] text-white py-24 px-6 flex flex-col items-center text-center">
+      {/* 🇮🇳 Subtle Tricolor Glow (soft, minimal, classy) */}
+      <div className="absolute top-[-50px] left-[-50px] w-72 h-72 bg-[#FF9933] blur-[120px] opacity-10 rounded-full"></div>
+      <div className="absolute bottom-[-60px] right-[-60px] w-72 h-72 bg-[#138808] blur-[120px] opacity-10 rounded-full"></div>
 
       {/* 🔱 Title */}
       <motion.h2
@@ -27,18 +27,17 @@ const Swadeshi = () => {
         transition={{ delay: 0.3, duration: 1 }}
         viewport={{ once: true }}
       >
-        Let's build a future where technology reflects the spirit of Bharat —  
-        self-reliant, innovative, and proud. 🌿  
-        <span className="text-[#F1E24] font-semibold">CodeForBharat</span> is not just a movement, it’s an emotion.
+        Let’s build a digital Bharat — powerful, creative, and self-reliant.  
+        <span className="text-[#FACC15] font-semibold"> Swadeshi Apps</span> bring pride and progress together. 🌿
       </motion.p>
 
-      {/* 🔥 Icon Features */}
+      {/* 🔥 Feature Cards */}
       <div className="mt-16 grid sm:grid-cols-1 md:grid-cols-3 gap-10 max-w-6xl">
         {[
           {
             icon: <FaMobileAlt size={45} className="text-[#FF9933]" />,
             title: "Build Swadeshi Apps",
-            desc: "Empower local innovation with global standards. Let's make in India, for the world.",
+            desc: "Empower local innovation with global standards. Let’s make in India, for the world.",
           },
           {
             icon: <FaRocket size={45} className="text-white" />,
@@ -53,11 +52,11 @@ const Swadeshi = () => {
         ].map((item, i) => (
           <motion.div
             key={i}
-            className="bg-[#121212]/70 border border-gray-700 hover:border-[#F1E24] p-8 rounded-xl shadow-lg backdrop-blur-sm transition-all duration-300"
+            className="bg-[#2e2e2e]/80 border border-gray-700 hover:border-[#FACC15] p-8 rounded-xl shadow-lg backdrop-blur-sm transition-all duration-300"
             whileHover={{ scale: 1.08, y: -8 }}
           >
             <div className="flex justify-center mb-4">{item.icon}</div>
-            <h3 className="text-2xl font-bold text-[#F1E24] mb-3">{item.title}</h3>
+            <h3 className="text-2xl font-bold text-[#FACC15] mb-3">{item.title}</h3>
             <p className="text-gray-400 text-sm md:text-base">{item.desc}</p>
           </motion.div>
         ))}
@@ -76,7 +75,7 @@ const Swadeshi = () => {
       {/* 🚀 CTA */}
       <motion.a
         href="#"
-        className="mt-12 inline-block bg-gradient-to-r from-[#FF9933] via-white to-[#138808] text-black font-bold px-10 py-4 rounded-full shadow-lg hover:shadow-[#F1E24]/50 hover:scale-105 transition-all duration-300"
+        className="mt-12 inline-block bg-gradient-to-r from-[#FF9933] via-white to-[#138808] text-black font-bold px-10 py-4 rounded-full shadow-lg hover:shadow-[#FACC15]/40 hover:scale-105 transition-all duration-300"
         whileHover={{ scale: 1.08 }}
         whileTap={{ scale: 0.95 }}
       >
@@ -85,7 +84,7 @@ const Swadeshi = () => {
 
       {/* 💫 Decorative Heart Pulse */}
       <motion.div
-        className="absolute bottom-10 left-10 text-[#F1E24]"
+        className="absolute bottom-10 left-10 text-[#FACC15]"
         animate={{ scale: [1, 1.3, 1], opacity: [0.8, 1, 0.8] }}
         transition={{ repeat: Infinity, duration: 2 }}
       >
