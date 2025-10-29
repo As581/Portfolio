@@ -1,5 +1,5 @@
 import React, { useState} from "react";
-import Hero3 from "./components/Hero3.jsx";
+import Hero4 from "./components/Hero4.jsx";
 import About from "./components/About.jsx";
 import Education from "./components/Education.jsx";
 import Skills from "./components/Skills.jsx";
@@ -8,7 +8,7 @@ import Contact2 from "./components/Contact2.jsx";
 import Working from "./components/MyWorkingProcess.jsx";
 import Loading from "./components/Loading.jsx";
 //import useLenis from "./Hooks/useLenis.jsx";
-import Navbar3 from "./components/Navbar3.jsx";
+import Navbar4 from "./components/Navbar4.jsx";
 import Footer from "./components/Footer.jsx";
 //import LocomotiveScroll from 'locomotive-scroll';
 import Bharat from "./components/Bharat.jsx";
@@ -26,9 +26,9 @@ function App() {
         <Loading onComplete={() => setLoading(false)} />
       ) : (
         <>
-          <Navbar3 />
+          <Navbar4 />
           <div id="hero">
-            <Hero3 />
+            <Hero4 />
           </div>
           <div id="about">
             <About />
