@@ -12,7 +12,7 @@ import Navbar3 from "./components/Navbar3.jsx";
 import Footer from "./components/Footer.jsx";
 //import LocomotiveScroll from 'locomotive-scroll';
 import Bharat from "./components/Bharat.jsx";
-import Swadeshi from "./components/Swadeshi.jsx";
+//import Swadeshi from "./components/Swadeshi.jsx";
 
 
 
@@ -47,9 +47,6 @@ function App() {
           </div>
           <div id="bharat">
               <Bharat />
-          </div>
-          <div id="swadeshi">
-             <Swadeshi />
           </div>
           <div id="contact">
             <Contact2 />
